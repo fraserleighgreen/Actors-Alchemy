@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 155" role="img" aria-labelledby="signature-title">
+  <title id="signature-title">Fraser Leigh Green signature</title>
+  <g fill="none" stroke="#fffaf2" stroke-linecap="round" stroke-linejoin="round">
+    <path
+      d="M48 98 C76 99 112 79 145 42 C165 19 181 15 178 33 C172 65 131 108 92 131 C64 148 44 144 50 128 C56 109 96 89 147 72 C183 60 207 61 206 75 C205 91 172 97 156 83 C142 71 154 51 175 28 C191 10 204 11 203 27 C200 61 167 96 127 111"
+      stroke-width="3.6"
+      opacity="0.92" />
+    <path
+      d="M127 111 C160 103 189 86 217 65 C205 88 199 104 210 107 C222 111 244 83 256 84 C266 85 258 107 271 109 C287 112 304 86 323 89 C339 92 329 114 307 114 C289 114 286 94 302 83 C324 68 355 88 379 87"
+      stroke-width="3"
+      opacity="0.66" />
+  </g>
+</svg>
