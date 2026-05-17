@@ -59,21 +59,6 @@ body.modal-open {
   overflow: hidden;
 }
 
-body.section-reveal-ready main > .section,
-body.section-reveal-ready .site-footer {
-  opacity: 0;
-  transform: translate3d(0, 0.55rem, 0);
-  transition: opacity 420ms var(--ease), transform 480ms var(--ease);
-  will-change: opacity, transform;
-}
-
-body.section-reveal-ready main > .section.is-visible,
-body.section-reveal-ready .site-footer.is-visible {
-  opacity: 1;
-  transform: none;
-  will-change: auto;
-}
-
 body::before {
   content: "";
   position: fixed;
@@ -205,6 +190,11 @@ p {
 .home-page .section > .container {
   position: relative;
   z-index: 1;
+}
+
+main > .section > .container {
+  transform: translate3d(var(--scroll-settle-x, 0), var(--scroll-settle-y, 0), 0);
+  will-change: transform;
 }
 
 .home-page .section::after {
@@ -636,7 +626,6 @@ p {
   --shadow-blur: 60px;
   --shadow-spread: -34px;
   --shadow-alpha: 0.36;
-  --scroll-drift: 0px;
   position: relative;
   overflow: hidden;
   min-height: 22rem;
@@ -646,7 +635,7 @@ p {
   background:
     linear-gradient(145deg, rgba(239, 230, 215, 0.92), rgba(248, 243, 235, 0.98));
   box-shadow: 0 var(--shadow-y) var(--shadow-blur) var(--shadow-spread) rgba(75, 71, 64, var(--shadow-alpha));
-  transform: perspective(900px) rotateX(var(--tilt-y)) rotateY(var(--tilt-x)) translate3d(var(--float-x), calc(var(--float-y) + var(--scroll-drift)), 0);
+  transform: perspective(900px) rotateX(var(--tilt-y)) rotateY(var(--tilt-x)) translate3d(var(--float-x), var(--float-y), 0);
   transform-style: preserve-3d;
   transition: transform 460ms var(--ease), box-shadow 260ms var(--ease), border-color 260ms var(--ease);
   will-change: transform;
@@ -2334,17 +2323,6 @@ p {
   }
 }
 
-@keyframes page-enter {
-  from {
-    opacity: 0;
-    transform: translateY(0.35rem);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 @keyframes panel-settle {
   0% {
     transform: perspective(900px) rotateX(0deg) rotateY(0deg) translate3d(0, 0, 0);
@@ -2698,9 +2676,7 @@ p {
     transform: none !important;
   }
 
-  body.section-reveal-ready main > .section,
-  body.section-reveal-ready .site-footer {
-    opacity: 1 !important;
+  main > .section > .container {
     transform: none !important;
   }
 

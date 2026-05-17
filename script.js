@@ -426,7 +426,7 @@ const sections = sectionNavLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 
-initSectionReveals();
+initScrollSettle();
 initLazyVideos();
 
 if (sections.length) {
@@ -448,27 +448,64 @@ if (sections.length) {
   sections.forEach((section) => observer.observe(section));
 }
 
-function initSectionReveals() {
+function initScrollSettle() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  if (!("IntersectionObserver" in window)) return;
 
-  const revealItems = Array.from(document.querySelectorAll("main > .section, .site-footer"));
-  if (!revealItems.length) return;
+  const settleItems = Array.from(document.querySelectorAll("main > .section > .container"));
+  if (!settleItems.length) return;
 
-  document.body.classList.add("section-reveal-ready");
+  let lastScrollY = window.scrollY;
+  let driftX = 0;
+  let driftY = 0;
+  let targetDriftX = 0;
+  let targetDriftY = 0;
+  let ticking = false;
 
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      revealObserver.unobserve(entry.target);
+  const render = () => {
+    driftX += (targetDriftX - driftX) * 0.11;
+    driftY += (targetDriftY - driftY) * 0.11;
+    if (
+      Math.abs(driftX) < 0.01
+      && Math.abs(driftY) < 0.01
+      && Math.abs(targetDriftX) < 0.01
+      && Math.abs(targetDriftY) < 0.01
+    ) {
+      driftX = 0;
+      driftY = 0;
+      targetDriftX = 0;
+      targetDriftY = 0;
+      ticking = false;
+    } else {
+      window.requestAnimationFrame(render);
+    }
+
+    settleItems.forEach((item, index) => {
+      const direction = index % 2 === 0 ? 1 : -1;
+      item.style.setProperty("--scroll-settle-x", `${(driftX * direction).toFixed(3)}px`);
+      item.style.setProperty("--scroll-settle-y", `${driftY.toFixed(3)}px`);
     });
-  }, {
-    rootMargin: "0px 0px -10% 0px",
-    threshold: 0.12,
-  });
+  };
 
-  revealItems.forEach((item) => revealObserver.observe(item));
+  const requestRender = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(render);
+  };
+
+  window.addEventListener("scroll", () => {
+    const delta = window.scrollY - lastScrollY;
+    lastScrollY = window.scrollY;
+    targetDriftX = Math.max(-14, Math.min(14, delta * 0.16));
+    targetDriftY = Math.max(-5, Math.min(5, delta * -0.06));
+    requestRender();
+
+    window.clearTimeout(initScrollSettle.settleTimer);
+    initScrollSettle.settleTimer = window.setTimeout(() => {
+      targetDriftX = 0;
+      targetDriftY = 0;
+      requestRender();
+    }, 120);
+  }, { passive: true });
 }
 
 function initLazyVideos() {
