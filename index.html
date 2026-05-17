@@ -134,7 +134,7 @@
             <figure class="testimonial-card">
               <blockquote>Working with Fraser helped me to characterise and express freely, allowing me to connect with the material more than I ever had before. Fraser's guidance is insightful and encouraging, has developed my understanding of acting through song, and has provided me the tools to approach new material with confidence!</blockquote>
               <figcaption class="testimonial-person">
-                <img src="assets/jamie-bailes.jpeg" alt="Headshot of Jamie Bailes">
+                <img src="assets/jamie-bailes.jpeg" alt="Headshot of Jamie Bailes" loading="lazy" decoding="async">
                 <span>
                   <strong>Jamie Bailes</strong>
                   <span>Acting through song coaching</span>
@@ -145,7 +145,7 @@
             <figure class="testimonial-card">
               <blockquote>Working with Fraser as my acting coach was really transformative. We focused a lot on scene work, and I saw a big improvement in my skills and confidence. Fraser is a fantastic teacher, very supportive, clear, and he really helped me grow as an actor. I'm so thankful for his guidance.</blockquote>
               <figcaption class="testimonial-person">
-                <img src="assets/patricia-kuhne.jpeg" alt="Headshot of Patricia Kuhne">
+                <img src="assets/patricia-kuhne.jpeg" alt="Headshot of Patricia Kuhne" loading="lazy" decoding="async">
                 <span>
                   <strong>Patricia K&uuml;hne</strong>
                   <span>Scene work and acting coaching</span>
@@ -161,9 +161,29 @@
 
     <section class="section fraser-teaser-section" id="fraser" aria-labelledby="fraser-title">
       <div class="container fraser-teaser">
-        <figure class="headshot-card fraser-teaser__image">
-          <img src="assets/fraserheadshot.JPG" alt="Headshot of Fraser Leigh Green">
-        </figure>
+        <div class="fraser-flip-wrap fraser-teaser__image">
+          <p class="flip-note flip-note-card" aria-hidden="true">
+            <svg viewBox="0 0 120 70" focusable="false">
+              <path d="M108 54C86 25 47 15 14 31"></path>
+              <path d="M22 18L10 32l17 5"></path>
+            </svg>
+            <span>flip me!</span>
+          </p>
+          <button class="headshot-card fraser-headshot fraser-flip-card fraser-teaser-flip-card" type="button" aria-pressed="false" aria-label="Flip Fraser's headshot to read more about him">
+            <span class="fraser-flip-card__inner">
+              <span class="fraser-flip-card__face fraser-flip-card__front">
+                <img src="assets/fraserheadshot.JPG" alt="Headshot of Fraser Leigh Green" loading="lazy" decoding="async">
+              </span>
+              <span class="fraser-flip-card__face fraser-flip-card__back">
+                <span class="flip-back-kicker">About me</span>
+                <span class="flip-back-title">A life in the room.</span>
+                <span class="flip-about-copy">I have spent more than ten years in the industry, with the privilege of playing many kinds of roles: the leading man, the panto villain, the romantic underdog and the comic character actor.</span>
+                <span class="flip-about-copy">I have sat on both sides of the casting panel, and have come to understand what we as performers need in order to thrive.</span>
+                <img class="fraser-signature" src="assets/fraser-signature-white.png" alt="Fraser Leigh Green signature" loading="lazy" decoding="async">
+              </span>
+            </span>
+          </button>
+        </div>
         <div>
           <p class="eyebrow">Fraser Leigh Green</p>
           <h2 id="fraser-title">Guiding performers toward truthful performance.</h2>

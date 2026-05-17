@@ -15,7 +15,7 @@ const coachingTopicButtons = Array.from(document.querySelectorAll(".coaching-top
 const coachingTopicModal = document.querySelector("#coaching-topic-modal");
 const coachingTopicTitle = document.querySelector("#coaching-topic-title");
 const coachingTopicDescription = document.querySelector("[data-topic-description]");
-const fraserFlipCard = document.querySelector(".fraser-flip-card");
+const fraserFlipCards = Array.from(document.querySelectorAll(".fraser-flip-card"));
 let activeTopicButton = null;
 
 const BOOKING_CONFIG = {
@@ -69,9 +69,11 @@ coachingTopicButtons.forEach((button) => {
   button.addEventListener("click", () => openCoachingTopic(button));
 });
 
-fraserFlipCard?.addEventListener("click", () => {
-  const isFlipped = fraserFlipCard.classList.toggle("is-flipped");
-  fraserFlipCard.setAttribute("aria-pressed", String(isFlipped));
+fraserFlipCards.forEach((fraserFlipCard) => {
+  fraserFlipCard.addEventListener("click", () => {
+    const isFlipped = fraserFlipCard.classList.toggle("is-flipped");
+    fraserFlipCard.setAttribute("aria-pressed", String(isFlipped));
+  });
 });
 
 if (heroPanel && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -284,9 +286,11 @@ async function openBookingModal() {
   if (!bookingModal) return;
   bookingModal.hidden = false;
   document.body.classList.add("modal-open");
+  bookingModal.scrollTop = 0;
   bookingStatus.textContent = "";
   await renderCalendar();
-  bookingModal.querySelector(".calendar-day.has-slots")?.focus();
+  bookingModal.scrollTop = 0;
+  bookingModal.querySelector(".booking-modal__close")?.focus();
 }
 
 function closeBookingModal() {
@@ -437,6 +441,7 @@ const sections = sectionNavLinks
   .filter(Boolean);
 
 initScrollReveals();
+initLazyVideos();
 
 if (sections.length) {
   const observer = new IntersectionObserver((entries) => {
@@ -465,7 +470,7 @@ function initScrollReveals() {
     [".hero-eyebrow", "reveal-soft"],
     [".hero-title", "reveal-soft"],
     [".hero-copy .button-row", ""],
-    [".hero-panel", "reveal-from-right reveal-soft scroll-drift"],
+    [".hero-panel", "reveal-from-right reveal-soft"],
     [".alchemy-flow", "reveal-soft"],
     [".section-intro .section-number, .testimonial-section-grid .section-number, .booking-section-grid .section-number", "reveal-from-left"],
     [".section-head, .section-intro .container > div > p:not(.eyebrow), .script-margin-note", "reveal-soft"],
@@ -531,4 +536,52 @@ function initScrollReveals() {
   updateDrift();
   window.addEventListener("scroll", requestDrift, { passive: true });
   window.addEventListener("resize", requestDrift);
+}
+
+function initLazyVideos() {
+  const lazyVideos = Array.from(document.querySelectorAll("video[data-lazy-video]"));
+  if (!lazyVideos.length) return;
+
+  const loadVideo = (video) => {
+    if (video.dataset.loaded === "true") return;
+
+    video.querySelectorAll("source[data-src]").forEach((source) => {
+      source.src = source.dataset.src;
+      source.removeAttribute("data-src");
+    });
+
+    video.dataset.loaded = "true";
+    video.load();
+  };
+
+  const playVideo = (video) => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    loadVideo(video);
+    video.play().catch(() => {});
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    lazyVideos.forEach(playVideo);
+    return;
+  }
+
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+
+      if (entry.isIntersecting) {
+        playVideo(video);
+        return;
+      }
+
+      if (video.dataset.loaded === "true") {
+        video.pause();
+      }
+    });
+  }, {
+    rootMargin: "240px 0px",
+    threshold: 0.08,
+  });
+
+  lazyVideos.forEach((video) => videoObserver.observe(video));
 }

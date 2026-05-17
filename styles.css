@@ -71,19 +71,17 @@ body.reveal-ready .reveal-on-scroll {
   transform: translate3d(0, 1.25rem, 0);
   transition:
     opacity 720ms var(--ease),
-    transform 820ms var(--ease),
-    filter 820ms var(--ease);
+    transform 820ms var(--ease);
   transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, transform;
 }
 
 body.reveal-ready .reveal-on-scroll.reveal-soft {
-  filter: blur(5px);
+  transform: translate3d(0, 1rem, 0);
 }
 
 body.reveal-ready .reveal-on-scroll.is-visible {
   opacity: 1;
-  filter: blur(0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -530,8 +528,7 @@ p {
   align-items: center;
   padding: var(--space-3) 1rem;
   border-bottom: 1px solid rgba(206, 194, 178, 0.72);
-  background: rgba(248, 243, 235, 0.88);
-  backdrop-filter: blur(16px);
+  background: rgba(248, 243, 235, 0.97);
 }
 
 .wordmark {
@@ -710,13 +707,11 @@ p {
 
 body.reveal-ready .hero-panel.reveal-on-scroll {
   opacity: 0;
-  filter: blur(5px);
   transform: perspective(900px) rotateX(var(--tilt-y)) rotateY(var(--tilt-x)) translate3d(calc(var(--float-x) + 1.15rem), calc(var(--float-y) + var(--scroll-drift) + 1.25rem), 0);
 }
 
 body.reveal-ready .hero-panel.reveal-on-scroll.is-visible {
   opacity: 1;
-  filter: blur(0);
   transform: perspective(900px) rotateX(var(--tilt-y)) rotateY(var(--tilt-x)) translate3d(var(--float-x), calc(var(--float-y) + var(--scroll-drift)), 0);
 }
 
@@ -1204,6 +1199,28 @@ body.reveal-ready .hero-panel.reveal-on-scroll.is-visible {
   height: clamp(22rem, 48vw, 31rem);
 }
 
+.fraser-teaser-flip-card {
+  min-height: clamp(22rem, 48vw, 31rem);
+  padding: 0;
+  text-align: left;
+}
+
+.fraser-teaser-flip-card .flip-back-title {
+  font-size: clamp(1.75rem, 3vw, 2.3rem);
+}
+
+.fraser-teaser-flip-card .flip-about-copy {
+  font-size: clamp(0.94rem, 1.5vw, 1.05rem);
+}
+
+.fraser-teaser-flip-card .fraser-flip-card__back {
+  justify-content: center;
+}
+
+.fraser-teaser-flip-card .fraser-signature {
+  margin-top: var(--space-1);
+}
+
 .booking-section {
   background:
     linear-gradient(180deg, rgba(239, 230, 215, 0.82), rgba(232, 221, 206, 0.92)),
@@ -1424,6 +1441,26 @@ body.reveal-ready .hero-panel.reveal-on-scroll.is-visible {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 4;
+}
+
+.flip-note-card {
+  position: absolute;
+  top: clamp(0.7rem, 2vw, 1rem);
+  left: clamp(0.7rem, 2vw, 1rem);
+  z-index: 4;
+  grid-template-columns: 4.1rem auto;
+  margin: 0;
+  padding: 0.42rem 0.56rem 0.38rem;
+  border-radius: 999px;
+  background: rgba(248, 243, 235, 0.78);
+  box-shadow: 0 12px 28px -24px rgba(40, 36, 31, 0.72);
+  font-size: 1rem;
+  transform: rotate(-4deg);
+}
+
+.flip-note-card svg {
+  width: 4.1rem;
+  transform: scaleX(-1);
 }
 
 .fraser-flip-card {
@@ -1914,8 +1951,14 @@ body.reveal-ready .hero-panel.reveal-on-scroll.is-visible {
   inset: 0;
   z-index: 80;
   display: grid;
-  place-items: center;
+  align-items: start;
+  justify-items: center;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
   padding: 1rem;
+  padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+  overscroll-behavior: contain;
 }
 
 .coaching-topic-modal {
@@ -1928,10 +1971,9 @@ body.reveal-ready .hero-panel.reveal-on-scroll.is-visible {
 }
 
 .booking-modal__scrim {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(40, 36, 31, 0.48);
-  backdrop-filter: blur(8px);
 }
 
 .coaching-topic-modal__scrim {
@@ -1939,15 +1981,15 @@ body.reveal-ready .hero-panel.reveal-on-scroll.is-visible {
   inset: 0;
   border-radius: var(--radius-lg);
   background: rgba(40, 36, 31, 0.42);
-  backdrop-filter: blur(4px);
 }
 
 .booking-modal__panel {
   position: relative;
   z-index: 1;
   width: min(100%, 1080px);
-  max-height: min(92vh, 900px);
-  overflow: auto;
+  max-height: none;
+  margin: clamp(0.75rem, 3vh, 1.5rem) 0;
+  overflow: visible;
   padding: clamp(1.1rem, 3vw, 2rem);
   border: 1px solid rgba(206, 194, 178, 0.9);
   border-radius: var(--radius-lg);
@@ -1956,6 +1998,7 @@ body.reveal-ready .hero-panel.reveal-on-scroll.is-visible {
     url("assets/texture-paper.svg");
   box-shadow: 0 44px 120px -48px rgba(40, 36, 31, 0.68);
   animation: booking-panel-in 420ms var(--ease);
+  scroll-margin-top: 1rem;
 }
 
 .coaching-topic-modal__panel {
