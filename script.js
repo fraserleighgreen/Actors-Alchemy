@@ -551,6 +551,17 @@ function initLazyVideos() {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const loadVideo = (video) => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.loop = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("loop", "");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("preload", "auto");
+
     if (video.dataset.loaded === "true") return;
 
     video.querySelectorAll("source[data-src]").forEach((source) => {
@@ -562,41 +573,26 @@ function initLazyVideos() {
     video.load();
   };
 
-  const playVideo = (video) => {
-    loadVideo(video);
+  const requestPlayback = (video) => {
     if (prefersReducedMotion) {
-      video.controls = true;
       return;
     }
 
-    video.muted = true;
-    video.defaultMuted = true;
-    video.playsInline = true;
-    video.play().catch(() => {
-      video.controls = true;
-    });
+    video.controls = false;
+    video.play().catch(() => {});
   };
 
-  lazyVideos.forEach((video) => {
-    video.addEventListener("click", () => {
-      loadVideo(video);
+  const playVideo = (video) => {
+    loadVideo(video);
+    requestPlayback(video);
 
-      if (video.paused) {
-        video.play().catch(() => {
-          video.controls = true;
-        });
-        return;
-      }
-
-      video.pause();
-    });
-  });
+    if (video.readyState < HTMLMediaElement.HAVE_ENOUGH_DATA) {
+      video.addEventListener("canplay", () => requestPlayback(video), { once: true });
+    }
+  };
 
   if (prefersReducedMotion) {
     lazyVideos.forEach(loadVideo);
-    lazyVideos.forEach((video) => {
-      video.controls = true;
-    });
     return;
   }
 
