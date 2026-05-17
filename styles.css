@@ -1533,6 +1533,22 @@ main > .section > .container {
   transform: scaleX(-1);
 }
 
+.puck-photo-caption {
+  width: fit-content;
+  margin: 0 0 var(--space-3) 0.2rem;
+  padding: 0.38rem 0.58rem 0.34rem;
+  border: 1px solid rgba(214, 177, 106, 0.36);
+  border-radius: 999px;
+  background: rgba(248, 243, 235, 0.76);
+  box-shadow: 0 12px 30px -26px rgba(40, 36, 31, 0.72);
+  color: var(--colour-alchemy);
+  font-family: var(--font-heading);
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  font-style: italic;
+  line-height: 1;
+  transform: rotate(1.5deg);
+}
+
 .fraser-flip-card {
   --flip-card-height: clamp(28rem, 48vw, 42rem);
   display: block;
@@ -1698,25 +1714,31 @@ main > .section > .container {
 
 .puck-flip-card .fraser-flip-card__back {
   justify-content: center;
-  gap: var(--space-3);
-  padding: clamp(1rem, 2vw, 1.45rem);
+  gap: clamp(0.6rem, 1vw, 0.85rem);
+  padding: clamp(0.85rem, 1.7vw, 1.25rem);
 }
 
 .puck-monologue {
   display: grid;
-  gap: 0.08rem;
+  gap: 0.1rem;
   margin: 0;
-  padding: clamp(0.78rem, 1.5vw, 1rem) 0 0;
+  padding: clamp(0.62rem, 1.2vw, 0.82rem) 0 0;
   border-top: 1px solid rgba(214, 177, 106, 0.26);
   color: rgba(248, 243, 235, 0.88);
   font-family: var(--font-heading);
-  font-size: clamp(0.78rem, 1.16vw, 0.96rem);
+  font-size: clamp(0.86rem, 1.28vw, 1.04rem);
   font-style: italic;
-  line-height: 1.16;
+  line-height: 1.12;
 }
 
 .puck-monologue span {
   display: block;
+}
+
+.puck-monologue__final {
+  color: var(--colour-gold);
+  font-weight: 600;
+  text-shadow: 0 10px 28px rgba(214, 177, 106, 0.18);
 }
 
 .fraser-page-title {
@@ -2800,6 +2822,20 @@ main > .section > .container {
 
   .headshot-card img {
     height: 23rem;
+  }
+
+  .puck-flip-card {
+    --flip-card-height: 31rem;
+  }
+
+  .puck-flip-card .fraser-flip-card__back {
+    padding: 0.85rem;
+  }
+
+  .puck-monologue {
+    gap: 0.06rem;
+    font-size: clamp(0.76rem, 3vw, 0.88rem);
+    line-height: 1.1;
   }
 
   .footer-inner {
