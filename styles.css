@@ -1888,6 +1888,10 @@ main > .section > .container {
   filter: saturate(0.9) contrast(0.98) sepia(0.05);
 }
 
+.stage-strip-card video {
+  cursor: pointer;
+}
+
 .stage-strip-card--grease-boat img {
   object-position: center 18%;
 }

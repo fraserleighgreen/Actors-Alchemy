@@ -548,6 +548,8 @@ function initLazyVideos() {
   const lazyVideos = Array.from(document.querySelectorAll("video[data-lazy-video]"));
   if (!lazyVideos.length) return;
 
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   const loadVideo = (video) => {
     if (video.dataset.loaded === "true") return;
 
@@ -561,10 +563,42 @@ function initLazyVideos() {
   };
 
   const playVideo = (video) => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     loadVideo(video);
-    video.play().catch(() => {});
+    if (prefersReducedMotion) {
+      video.controls = true;
+      return;
+    }
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.play().catch(() => {
+      video.controls = true;
+    });
   };
+
+  lazyVideos.forEach((video) => {
+    video.addEventListener("click", () => {
+      loadVideo(video);
+
+      if (video.paused) {
+        video.play().catch(() => {
+          video.controls = true;
+        });
+        return;
+      }
+
+      video.pause();
+    });
+  });
+
+  if (prefersReducedMotion) {
+    lazyVideos.forEach(loadVideo);
+    lazyVideos.forEach((video) => {
+      video.controls = true;
+    });
+    return;
+  }
 
   if (!("IntersectionObserver" in window)) {
     lazyVideos.forEach(playVideo);
