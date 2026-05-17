@@ -57,105 +57,6 @@ body {
     url("assets/texture-paper.svg");
 }
 
-@media (hover: hover) and (pointer: fine) {
-  html.has-alchemy-cursor,
-  html.has-alchemy-cursor body,
-  html.has-alchemy-cursor a,
-  html.has-alchemy-cursor button,
-  html.has-alchemy-cursor input,
-  html.has-alchemy-cursor textarea,
-  html.has-alchemy-cursor select,
-  html.has-alchemy-cursor [role="button"] {
-    cursor: none;
-  }
-
-  html.has-alchemy-cursor .google-calendar-embed {
-    cursor: auto;
-  }
-
-  .alchemy-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 2.05rem;
-    height: 2.05rem;
-    pointer-events: none;
-    opacity: 0;
-    transform: translate3d(-4rem, -4rem, 0);
-    transition: opacity 160ms var(--ease);
-    will-change: transform, opacity;
-    contain: layout style paint;
-  }
-
-  .alchemy-cursor.is-visible {
-    opacity: 1;
-  }
-
-  .alchemy-cursor.is-muted {
-    opacity: 0;
-  }
-
-  .alchemy-cursor__ring,
-  .alchemy-cursor__mark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-  }
-
-  .alchemy-cursor__ring {
-    width: 1.7rem;
-    height: 1.7rem;
-    border: 1px solid rgba(150, 95, 67, 0.42);
-    border-radius: 50%;
-    background: rgba(248, 243, 235, 0.5);
-    box-shadow: 0 8px 22px -18px rgba(40, 36, 31, 0.7);
-    transition:
-      width 180ms var(--ease),
-      height 180ms var(--ease),
-      border-color 180ms var(--ease),
-      background 180ms var(--ease),
-      box-shadow 180ms var(--ease);
-  }
-
-  .alchemy-cursor__mark {
-    width: 0.74rem;
-    height: 0.74rem;
-    background: var(--colour-copper);
-    opacity: 0.86;
-    -webkit-mask: url("assets/actors-alchemy-icon.svg") center / contain no-repeat;
-    mask: url("assets/actors-alchemy-icon.svg") center / contain no-repeat;
-    transition:
-      width 180ms var(--ease),
-      height 180ms var(--ease),
-      background 180ms var(--ease),
-      opacity 180ms var(--ease);
-  }
-
-  .alchemy-cursor.is-interactive .alchemy-cursor__ring {
-    width: 2.55rem;
-    height: 2.55rem;
-    border-color: rgba(184, 110, 67, 0.68);
-    background: rgba(248, 243, 235, 0.68);
-    box-shadow: 0 14px 34px -24px rgba(40, 36, 31, 0.8);
-  }
-
-  .alchemy-cursor.is-interactive .alchemy-cursor__mark {
-    width: 0.9rem;
-    height: 0.9rem;
-    background: var(--colour-clay);
-    opacity: 0.95;
-  }
-
-  .alchemy-cursor.is-pressed .alchemy-cursor__ring {
-    width: 1.9rem;
-    height: 1.9rem;
-    background: rgba(239, 230, 215, 0.78);
-  }
-}
-
 body.modal-open {
   overflow: hidden;
 }
@@ -247,6 +148,9 @@ h1 {
 .gold-word {
   display: inline-block;
   color: #b9823c;
+  line-height: 1.12;
+  margin-bottom: -0.08em;
+  padding: 0 0.02em 0.08em;
   transition: color 220ms var(--ease), filter 220ms var(--ease), text-shadow 220ms var(--ease), transform 220ms var(--ease);
 }
 
