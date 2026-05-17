@@ -20,7 +20,7 @@ let activeTopicButton = null;
 
 const BOOKING_CONFIG = {
   timezone: "Europe/London",
-  ownerEmail: "",
+  ownerEmail: "fraser@actorsalchemy.co.uk",
   availabilityEndpoint: "",
   requestEndpoint: "",
 };
@@ -386,7 +386,9 @@ async function submitBookingRequest(event) {
   bookingState.selectedTime = "";
   bookingStatus.textContent = BOOKING_CONFIG.requestEndpoint
     ? "Request sent. Fraser will confirm by email."
-    : "Request saved locally. Add an email or booking endpoint to send it automatically.";
+    : BOOKING_CONFIG.ownerEmail
+      ? "Email request opened. Send it to Fraser to confirm your booking request."
+      : "Request saved locally. Add an email or booking endpoint to send it automatically.";
   document.querySelectorAll(".slot-button").forEach((item) => item.classList.remove("is-selected"));
 }
 
