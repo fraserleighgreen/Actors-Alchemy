@@ -1747,6 +1747,31 @@ main > .section > .container {
   line-height: 0.98;
 }
 
+.fraser-page-title-personal {
+  max-width: 13ch;
+  font-size: clamp(2.35rem, 4.45vw, 4rem);
+}
+
+.fraser-personal-copy {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 44rem;
+  color: var(--colour-lead);
+  font-size: clamp(0.98rem, 1.32vw, 1.08rem);
+  line-height: 1.56;
+}
+
+.fraser-personal-copy p {
+  margin: 0;
+  color: inherit;
+}
+
+.fraser-personal-copy em {
+  color: var(--colour-alchemy);
+  font-style: italic;
+  font-weight: 700;
+}
+
 .fraser-kicker {
   max-width: 40rem;
 }
