@@ -1977,8 +1977,10 @@ main > .section > .container {
 
 .footer-inner {
   display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: var(--space-4);
   align-items: center;
+  justify-content: space-between;
 }
 
 .footer-inner p {
@@ -1989,6 +1991,8 @@ main > .section > .container {
 .footer-contact {
   display: flex;
   align-items: center;
+  justify-self: end;
+  text-align: right;
 }
 
 .footer-links {
@@ -1996,6 +2000,7 @@ main > .section > .container {
   flex-wrap: wrap;
   gap: var(--space-3) var(--space-5);
   align-items: center;
+  justify-content: flex-end;
 }
 
 .footer-links a {
@@ -2653,18 +2658,7 @@ main > .section > .container {
   }
 
   .footer-inner {
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .footer-contact {
-    justify-self: end;
-    text-align: right;
-  }
-
-  .footer-links {
-    justify-content: flex-end;
+    grid-template-columns: auto minmax(0, 1fr);
   }
 
   .booking-flow {
@@ -2772,6 +2766,20 @@ main > .section > .container {
 
   .headshot-card img {
     height: 23rem;
+  }
+
+  .footer-inner {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+  }
+
+  .footer-contact {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
   }
 }
 
