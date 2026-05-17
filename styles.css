@@ -1533,6 +1533,7 @@ main > .section > .container {
 }
 
 .fraser-flip-card {
+  --flip-frame-inset: clamp(0.5rem, 1.4vw, 0.85rem);
   display: block;
   overflow: visible;
   width: 100%;
@@ -1584,7 +1585,7 @@ main > .section > .container {
 .fraser-flip-card__front img {
   width: 100%;
   height: 100%;
-  padding: clamp(0.5rem, 1.4vw, 0.85rem);
+  padding: var(--flip-frame-inset);
   object-fit: contain;
   object-position: center center;
   transform: translateZ(0.01px);
@@ -1597,9 +1598,11 @@ main > .section > .container {
 
 .fraser-flip-card__back {
   display: flex;
+  inset: var(--flip-frame-inset);
   flex-direction: column;
   align-content: start;
   gap: var(--space-3);
+  border-radius: max(var(--radius-sm), calc(var(--radius-lg) - var(--flip-frame-inset)));
   padding: clamp(1.05rem, 2.8vw, 1.65rem);
   background:
     linear-gradient(145deg, rgba(40, 36, 31, 0.98), rgba(60, 56, 50, 0.96)),
