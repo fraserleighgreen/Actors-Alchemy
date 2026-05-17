@@ -21,6 +21,10 @@
   <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://calendar.google.com">
+  <link rel="preconnect" href="https://accounts.google.com">
+  <link rel="preconnect" href="https://ssl.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//calendar.google.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
@@ -227,11 +231,69 @@
             </span>
           </button>
         </div>
-        <div>
+        <div class="fraser-teaser__copy">
           <p class="eyebrow">Fraser Leigh Green</p>
           <h2 id="fraser-title">Guiding performers toward truthful performance.</h2>
           <a class="button button-secondary" href="fraser.html">Read about Fraser</a>
         </div>
+
+        <section class="home-stage-reel" aria-labelledby="home-stage-reel-title">
+          <div class="home-stage-reel__heading">
+            <p class="eyebrow" id="home-stage-reel-title">Stage &amp; screen</p>
+          </div>
+
+          <div class="stage-strip" aria-label="Scrollable stage and screen reel">
+            <figure class="stage-strip-card">
+              <video data-lazy-video muted loop playsinline preload="none" aria-label="Royal stage performance footage from Grease">
+                <source data-src="assets/ROYAL%20STAGE%20GREASE.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <figure class="stage-strip-card stage-strip-card--grease-boat">
+              <img src="assets/stage-reel-grease-1.jpg" alt="Fraser performing on stage" loading="lazy" decoding="async">
+            </figure>
+            <figure class="stage-strip-card">
+              <video data-lazy-video muted loop playsinline preload="none" aria-label="Doctor Who performance clip">
+                <source data-src="assets/DOCTOR%20WHO%20CLIP%201.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <figure class="stage-strip-card stage-strip-card--grease-panto">
+              <img src="assets/stage-reel-grease-2.jpg" alt="Fraser in performance photography" loading="lazy" decoding="async">
+            </figure>
+            <figure class="stage-strip-card">
+              <img src="assets/stage-reel-vince-2.jpg" alt="Fraser performing in Grease" loading="lazy" decoding="async">
+            </figure>
+            <figure class="stage-strip-card">
+              <img src="assets/ELEGIES%201.WEBP" alt="Fraser performing in Elegies for Angels, Punks and Raging Queens" loading="lazy" decoding="async">
+            </figure>
+            <figure class="stage-strip-card">
+              <img src="assets/ELEGIES%202.WEBP" alt="Fraser on stage in Elegies for Angels, Punks and Raging Queens" loading="lazy" decoding="async">
+            </figure>
+            <figure class="stage-strip-card stage-strip-card--barricade">
+              <img src="assets/stage-reel-barricade-boys.jpg" alt="Fraser performing with The Barricade Boys" loading="lazy" decoding="async">
+            </figure>
+            <figure class="stage-strip-card">
+              <video data-lazy-video muted loop playsinline preload="none" aria-label="Sex Education performance clip">
+                <source data-src="assets/SEX%20ED%20CLIPS.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <figure class="stage-strip-card">
+              <img src="assets/stage-reel-stage-1.jpg" alt="Fraser performing on stage" loading="lazy" decoding="async">
+            </figure>
+            <figure class="stage-strip-card">
+              <video data-lazy-video muted loop playsinline preload="none" aria-label="Doctor Who performance clip">
+                <source data-src="assets/DOCTOR%20WHO%20CLIP%202.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <figure class="stage-strip-card">
+              <img src="assets/stage-reel-stage-2.jpg" alt="Fraser in a stage production" loading="lazy" decoding="async">
+            </figure>
+            <figure class="stage-strip-card">
+              <video data-lazy-video muted loop playsinline preload="none" aria-label="Doctor Who performance clip">
+                <source data-src="assets/DOCTOR%20WHO%20CLIP%203.mp4" type="video/mp4">
+              </video>
+            </figure>
+          </div>
+        </section>
       </div>
       <p class="process-note process-note-about">given circumstances are not decoration</p>
     </section>
@@ -256,6 +318,8 @@
                   class="google-calendar-embed"
                   src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0g_dRHZeRdO8E4UtYs_XI8L-Zts16q8S1w9GamopuZHjlWN6RJDGGHnVs0_v8Wgrbu8GyJbKvz?gv=true"
                   title="Book an Actors Alchemy coaching session"
+                  width="100%"
+                  height="900"
                   frameborder="0"></iframe>
                 <a
                   class="button button-secondary booking-calendar-link"

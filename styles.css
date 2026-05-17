@@ -1175,6 +1175,36 @@ main > .section > .container {
   margin-top: var(--space-4);
 }
 
+.home-stage-reel {
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin-top: var(--space-3);
+}
+
+.home-stage-reel__heading {
+  margin-bottom: var(--space-4);
+}
+
+.home-stage-reel__heading .eyebrow {
+  margin-bottom: 0;
+}
+
+.home-stage-reel .stage-strip-card {
+  flex-basis: clamp(18rem, 34vw, 26rem);
+}
+
+.fraser-teaser__image {
+  order: 1;
+}
+
+.fraser-teaser__copy {
+  order: 2;
+}
+
+.home-stage-reel {
+  order: 3;
+}
+
 .fraser-teaser__image img {
   height: clamp(22rem, 48vw, 31rem);
 }
@@ -1209,6 +1239,10 @@ main > .section > .container {
     url("assets/texture-paper.svg");
 }
 
+.booking-section .container {
+  width: min(100% - 1.25rem, 1280px);
+}
+
 .booking-section-grid {
   justify-items: center;
 }
@@ -1219,7 +1253,7 @@ main > .section > .container {
 
 .booking-section-grid .booking-grid {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1240px;
   justify-self: center;
 }
 
@@ -1232,7 +1266,7 @@ main > .section > .container {
 
 .booking-card {
   position: relative;
-  padding: var(--space-3);
+  padding: var(--space-2);
   border: 1px solid rgba(166, 106, 67, 0.18);
   border-radius: var(--radius-lg);
   background: rgba(248, 243, 235, 0.84);
@@ -1265,7 +1299,7 @@ main > .section > .container {
 .booking-embed {
   display: grid;
   gap: var(--space-4);
-  padding: var(--space-5);
+  padding: var(--space-3);
   border: 1px dashed rgba(166, 106, 67, 0.32);
   border-radius: var(--radius-md);
   background: var(--colour-warm-white);
@@ -1342,7 +1376,8 @@ main > .section > .container {
 
 .google-calendar-embed {
   width: 100%;
-  min-height: 52rem;
+  height: min(64rem, calc(100vh + 16rem));
+  min-height: 56rem;
   border: 0;
   border-radius: var(--radius-sm);
   background: var(--colour-warm-white);
@@ -2573,7 +2608,7 @@ main > .section > .container {
   }
 
   .booking-section-grid .booking-grid {
-    grid-template-columns: minmax(0, 1080px);
+    grid-template-columns: minmax(0, 1240px);
     align-items: start;
     justify-content: center;
   }
@@ -2682,13 +2717,21 @@ main > .section > .container {
     width: 100%;
   }
 
+  .fraser-teaser__copy {
+    order: 3;
+  }
+
+  .home-stage-reel {
+    order: 2;
+  }
+
   .booking-card {
-    padding: 0.55rem;
+    padding: 0.35rem;
   }
 
   .booking-embed {
-    gap: var(--space-4);
-    padding: var(--space-3);
+    gap: var(--space-3);
+    padding: 0.35rem;
   }
 
   .session-summary strong {
@@ -2702,7 +2745,8 @@ main > .section > .container {
   }
 
   .google-calendar-embed {
-    min-height: 46rem;
+    height: 48rem;
+    min-height: 48rem;
   }
 
   .booking-anchor {

@@ -18,6 +18,11 @@ const coachingTopicDescription = document.querySelector("[data-topic-description
 const fraserFlipCards = Array.from(document.querySelectorAll(".fraser-flip-card"));
 let activeTopicButton = null;
 
+const GOOGLE_BOOKING_URL = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0g_dRHZeRdO8E4UtYs_XI8L-Zts16q8S1w9GamopuZHjlWN6RJDGGHnVs0_v8Wgrbu8GyJbKvz?gv=true";
+const bookingCalendarAnchor = document.querySelector("#booking-calendar");
+const bookingCalendarEmbed = document.querySelector(".google-calendar-embed");
+const bookingAnchorLinks = Array.from(document.querySelectorAll('a[href="#booking-calendar"], a[href$="index.html#booking-calendar"]'));
+
 const BOOKING_CONFIG = {
   timezone: "Europe/London",
   ownerEmail: "fraser@actorsalchemy.co.uk",
@@ -47,6 +52,37 @@ navLinks.forEach((link) => {
 if (requestButton) {
   requestButton.addEventListener("click", openBookingModal);
 }
+
+function warmBookingCalendar() {
+  if (!bookingCalendarEmbed) return;
+
+  if (!bookingCalendarEmbed.getAttribute("src")) {
+    bookingCalendarEmbed.setAttribute("src", GOOGLE_BOOKING_URL);
+  }
+}
+
+function scrollToBookingCalendar(event) {
+  if (!bookingCalendarAnchor) return;
+
+  const link = event.currentTarget;
+  const href = link instanceof HTMLAnchorElement ? link.getAttribute("href") || "" : "";
+  const isSamePageBookingLink = href === "#booking-calendar";
+
+  warmBookingCalendar();
+
+  if (!isSamePageBookingLink) return;
+
+  event.preventDefault();
+  bookingCalendarAnchor.scrollIntoView({ block: "start", behavior: "smooth" });
+  window.history.pushState(null, "", "#booking-calendar");
+}
+
+bookingAnchorLinks.forEach((link) => {
+  link.addEventListener("pointerenter", warmBookingCalendar);
+  link.addEventListener("focus", warmBookingCalendar);
+  link.addEventListener("touchstart", warmBookingCalendar, { passive: true });
+  link.addEventListener("click", scrollToBookingCalendar);
+});
 
 coachingTopicButtons.forEach((button) => {
   button.setAttribute("aria-expanded", "false");
