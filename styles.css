@@ -53,44 +53,23 @@ body {
   background:
     linear-gradient(rgba(248, 243, 235, 0.9), rgba(248, 243, 235, 0.9)),
     url("assets/texture-paper.svg");
-  animation: page-enter 320ms var(--ease) both;
 }
 
 body.modal-open {
   overflow: hidden;
 }
 
-body.is-page-leaving {
+body.section-reveal-ready main > .section,
+body.section-reveal-ready .site-footer {
   opacity: 0;
-  transform: translateY(0.35rem);
-  transition: opacity 180ms var(--ease), transform 180ms var(--ease);
+  transform: translate3d(0, 0.9rem, 0);
+  transition: opacity 520ms var(--ease), transform 560ms var(--ease);
 }
 
-body.reveal-ready .reveal-on-scroll {
-  opacity: 0;
-  transform: translate3d(0, 1.25rem, 0);
-  transition:
-    opacity 720ms var(--ease),
-    transform 820ms var(--ease);
-  transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
-}
-
-body.reveal-ready .reveal-on-scroll.reveal-soft {
-  transform: translate3d(0, 1rem, 0);
-}
-
-body.reveal-ready .reveal-on-scroll.is-visible {
+body.section-reveal-ready main > .section.is-visible,
+body.section-reveal-ready .site-footer.is-visible {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
-body.reveal-ready .reveal-from-left {
-  transform: translate3d(-1.15rem, 0, 0);
-}
-
-body.reveal-ready .reveal-from-right {
-  transform: translate3d(1.15rem, 0, 0);
+  transform: none;
 }
 
 body::before {
@@ -703,16 +682,6 @@ p {
 
 .hero-panel.is-settling {
   animation: panel-settle 620ms var(--ease);
-}
-
-body.reveal-ready .hero-panel.reveal-on-scroll {
-  opacity: 0;
-  transform: perspective(900px) rotateX(var(--tilt-y)) rotateY(var(--tilt-x)) translate3d(calc(var(--float-x) + 1.15rem), calc(var(--float-y) + var(--scroll-drift) + 1.25rem), 0);
-}
-
-body.reveal-ready .hero-panel.reveal-on-scroll.is-visible {
-  opacity: 1;
-  transform: perspective(900px) rotateX(var(--tilt-y)) rotateY(var(--tilt-x)) translate3d(var(--float-x), calc(var(--float-y) + var(--scroll-drift)), 0);
 }
 
 .hero-panel p:last-child {
@@ -2727,23 +2696,14 @@ body.reveal-ready .hero-panel.reveal-on-scroll.is-visible {
     transform: none !important;
   }
 
-  .reveal-on-scroll,
-  .scroll-drift {
+  body.section-reveal-ready main > .section,
+  body.section-reveal-ready .site-footer {
     opacity: 1 !important;
-    filter: none !important;
     transform: none !important;
   }
 
   .fraser-flip-card__inner {
     transition: none;
-  }
-
-  body {
-    animation: none;
-  }
-
-  body.is-page-leaving {
-    transform: none;
   }
 
   .button::before,

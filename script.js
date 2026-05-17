@@ -44,22 +44,6 @@ navLinks.forEach((link) => {
   });
 });
 
-document.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const href = link.getAttribute("href");
-    const isModifiedClick = event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
-    const isPageLink = href && !href.startsWith("#") && !href.startsWith("mailto:") && !href.startsWith("http");
-
-    if (!isPageLink || isModifiedClick || link.target === "_blank") return;
-
-    event.preventDefault();
-    document.body.classList.add("is-page-leaving");
-    window.setTimeout(() => {
-      window.location.href = link.href;
-    }, 170);
-  });
-});
-
 if (requestButton) {
   requestButton.addEventListener("click", openBookingModal);
 }
@@ -442,7 +426,7 @@ const sections = sectionNavLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 
-initScrollReveals();
+initSectionReveals();
 initLazyVideos();
 
 if (sections.length) {
@@ -464,43 +448,14 @@ if (sections.length) {
   sections.forEach((section) => observer.observe(section));
 }
 
-function initScrollReveals() {
+function initSectionReveals() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (!("IntersectionObserver" in window)) return;
 
-  const revealGroups = [
-    [".hero-section-number", "reveal-from-left"],
-    [".hero-eyebrow", "reveal-soft"],
-    [".hero-title", "reveal-soft"],
-    [".hero-copy .button-row", ""],
-    [".hero-panel", "reveal-from-right reveal-soft"],
-    [".alchemy-flow", "reveal-soft"],
-    [".section-intro .section-number, .testimonial-section-grid .section-number, .booking-section-grid .section-number", "reveal-from-left"],
-    [".section-head, .section-intro .container > div > p:not(.eyebrow), .script-margin-note", "reveal-soft"],
-    [".coaching-grid > div:first-child > *, .coaching-list li", "reveal-soft"],
-    [".testimonial-card", "reveal-soft"],
-    [".about-grid > *, .booking-grid > *, .booking-card, .final-cta > *, .contact-grid > *, .fraser-hero > *, .stage-reel-heading > *, .stage-strip-card, .credits-panel, .fraser-cta-card", "reveal-soft"],
-  ];
-
-  const revealItems = [];
-  const seen = new Set();
-
-  revealGroups.forEach(([selector, extraClasses]) => {
-    document.querySelectorAll(selector).forEach((element) => {
-      if (seen.has(element)) return;
-      seen.add(element);
-      element.classList.add("reveal-on-scroll");
-      extraClasses.split(" ").filter(Boolean).forEach((className) => element.classList.add(className));
-      revealItems.push(element);
-    });
-  });
-
+  const revealItems = Array.from(document.querySelectorAll("main > .section, .site-footer"));
   if (!revealItems.length) return;
 
-  document.body.classList.add("reveal-ready");
-
-  revealItems.forEach((element, index) => {
-    element.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 70}ms`);
-  });
+  document.body.classList.add("section-reveal-ready");
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -509,35 +464,11 @@ function initScrollReveals() {
       revealObserver.unobserve(entry.target);
     });
   }, {
-    rootMargin: "0px 0px -12% 0px",
-    threshold: 0.16,
+    rootMargin: "0px 0px -10% 0px",
+    threshold: 0.12,
   });
 
-  revealItems.forEach((element) => revealObserver.observe(element));
-
-  const driftItems = Array.from(document.querySelectorAll(".scroll-drift"));
-  if (!driftItems.length) return;
-
-  let ticking = false;
-  const updateDrift = () => {
-    driftItems.forEach((element) => {
-      const rect = element.getBoundingClientRect();
-      const progress = (rect.top + rect.height / 2 - window.innerHeight / 2) / window.innerHeight;
-      const drift = Math.max(-1, Math.min(1, progress)) * -10;
-      element.style.setProperty("--scroll-drift", `${drift.toFixed(2)}px`);
-    });
-    ticking = false;
-  };
-
-  const requestDrift = () => {
-    if (ticking) return;
-    ticking = true;
-    window.requestAnimationFrame(updateDrift);
-  };
-
-  updateDrift();
-  window.addEventListener("scroll", requestDrift, { passive: true });
-  window.addEventListener("resize", requestDrift);
+  revealItems.forEach((item) => revealObserver.observe(item));
 }
 
 function initLazyVideos() {
