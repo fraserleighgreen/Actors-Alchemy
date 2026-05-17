@@ -1205,7 +1205,6 @@ main > .section > .container {
 }
 
 .fraser-teaser__image {
-  --flip-card-width: clamp(17.5rem, 31vw, 24.8rem);
   order: 1;
 }
 
@@ -1218,10 +1217,12 @@ main > .section > .container {
 }
 
 .fraser-teaser__image img {
-  height: 100%;
+  height: clamp(22rem, 48vw, 31rem);
 }
 
 .fraser-teaser-flip-card {
+  --flip-card-height: clamp(22rem, 48vw, 31rem);
+  min-height: clamp(22rem, 48vw, 31rem);
   padding: 0;
   text-align: left;
 }
@@ -1231,13 +1232,13 @@ main > .section > .container {
 }
 
 .fraser-teaser-flip-card .flip-about-copy {
-  font-size: clamp(0.82rem, 1.22vw, 0.94rem);
-  line-height: 1.36;
+  font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+  line-height: 1.32;
 }
 
 .fraser-teaser-flip-card .fraser-flip-card__back {
   justify-content: center;
-  gap: var(--space-2);
+  gap: 0.55rem;
 }
 
 .fraser-teaser-flip-card .fraser-signature {
@@ -1483,7 +1484,6 @@ main > .section > .container {
 
 .fraser-flip-wrap {
   position: relative;
-  width: min(100%, var(--flip-card-width, clamp(20rem, 35vw, 32rem)));
   perspective: 1400px;
 }
 
@@ -1534,12 +1534,11 @@ main > .section > .container {
 }
 
 .fraser-flip-card {
-  --flip-frame-inset: clamp(0.5rem, 1.4vw, 0.85rem);
-  aspect-ratio: var(--flip-card-aspect, 0.78);
+  --flip-card-height: clamp(28rem, 48vw, 42rem);
   display: block;
   overflow: visible;
   width: 100%;
-  min-height: 0;
+  min-height: var(--flip-card-height);
   cursor: pointer;
   isolation: isolate;
   transform-style: preserve-3d;
@@ -1556,9 +1555,8 @@ main > .section > .container {
 .fraser-flip-card__inner {
   position: relative;
   display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
+  height: var(--flip-card-height);
+  min-height: var(--flip-card-height);
   border-radius: inherit;
   transform-style: preserve-3d;
   transition: transform 720ms var(--ease);
@@ -1575,6 +1573,7 @@ main > .section > .container {
   inset: 0;
   display: block;
   overflow: hidden;
+  min-height: 100%;
   border-radius: inherit;
   background: var(--colour-parchment);
   -webkit-backface-visibility: hidden;
@@ -1589,25 +1588,23 @@ main > .section > .container {
 .fraser-flip-card__front img {
   width: 100%;
   height: 100%;
-  padding: var(--flip-frame-inset);
-  object-fit: contain;
-  object-position: center center;
+  object-fit: cover;
+  object-position: center 34%;
   transform: translateZ(0.01px);
 }
 
 .headshot-card.fraser-flip-card .fraser-flip-card__front img {
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .fraser-flip-card__back {
   display: flex;
-  inset: var(--flip-frame-inset);
   flex-direction: column;
   align-content: start;
-  gap: var(--space-3);
-  border-radius: max(var(--radius-sm), calc(var(--radius-lg) - var(--flip-frame-inset)));
-  padding: clamp(1.05rem, 2.8vw, 1.65rem);
+  justify-content: flex-start;
+  gap: clamp(0.55rem, 1.2vw, 0.85rem);
+  padding: clamp(0.95rem, 2.1vw, 1.45rem);
   background:
     linear-gradient(145deg, rgba(40, 36, 31, 0.98), rgba(60, 56, 50, 0.96)),
     url("assets/texture-paper.svg");
@@ -1629,7 +1626,7 @@ main > .section > .container {
   display: block;
   color: var(--colour-gold);
   font-family: var(--font-heading);
-  font-size: clamp(1.9rem, 3.35vw, 2.7rem);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
   line-height: 1;
 }
 
@@ -1674,19 +1671,20 @@ main > .section > .container {
 .flip-about-copy {
   display: block;
   color: rgba(248, 243, 235, 0.82);
-  font-size: clamp(0.92rem, 1.3vw, 1.03rem);
-  line-height: 1.46;
+  font-size: clamp(0.82rem, 1.15vw, 0.95rem);
+  line-height: 1.34;
 }
 
 .fraser-flip-card__back img.fraser-signature {
   display: block;
+  flex: 0 0 auto;
   align-self: center;
-  width: min(32%, 5.4rem);
+  width: clamp(4.4rem, 32%, 6.1rem);
   height: auto;
   max-height: none;
   object-fit: contain;
   object-position: center center;
-  margin-top: 0;
+  margin-top: auto;
   padding-top: 0;
   opacity: 0.86;
   filter: none;
