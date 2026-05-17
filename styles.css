@@ -1598,6 +1598,12 @@ main > .section > .container {
   object-fit: cover;
 }
 
+.puck-flip-card .fraser-flip-card__front img {
+  object-fit: contain;
+  object-position: center center;
+  background: var(--colour-parchment);
+}
+
 .fraser-flip-card__back {
   display: flex;
   flex-direction: column;
@@ -1688,6 +1694,29 @@ main > .section > .container {
   padding-top: 0;
   opacity: 0.86;
   filter: none;
+}
+
+.puck-flip-card .fraser-flip-card__back {
+  justify-content: center;
+  gap: var(--space-3);
+  padding: clamp(1rem, 2vw, 1.45rem);
+}
+
+.puck-monologue {
+  display: grid;
+  gap: 0.08rem;
+  margin: 0;
+  padding: clamp(0.78rem, 1.5vw, 1rem) 0 0;
+  border-top: 1px solid rgba(214, 177, 106, 0.26);
+  color: rgba(248, 243, 235, 0.88);
+  font-family: var(--font-heading);
+  font-size: clamp(0.78rem, 1.16vw, 0.96rem);
+  font-style: italic;
+  line-height: 1.16;
+}
+
+.puck-monologue span {
+  display: block;
 }
 
 .fraser-page-title {
