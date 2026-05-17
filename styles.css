@@ -1330,6 +1330,12 @@ main > .section > .container {
   order: -1;
 }
 
+.booking-anchor {
+  display: block;
+  height: 0;
+  scroll-margin-top: 6.5rem;
+}
+
 .booking-calendar-link {
   justify-self: center;
 }
@@ -1340,7 +1346,6 @@ main > .section > .container {
   border: 0;
   border-radius: var(--radius-sm);
   background: var(--colour-warm-white);
-  scroll-margin-top: 6.5rem;
 }
 
 .headshot-card {
@@ -2698,6 +2703,9 @@ main > .section > .container {
 
   .google-calendar-embed {
     min-height: 46rem;
+  }
+
+  .booking-anchor {
     scroll-margin-top: 5.5rem;
   }
 
