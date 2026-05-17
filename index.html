@@ -68,10 +68,11 @@
       <a href="#top">Home</a>
       <a href="#testimonials">Testimonials</a>
       <a href="fraser.html">About</a>
+      <a class="nav-booking-link" href="#booking-calendar">Bookings</a>
       <a href="contact.html">Contact</a>
-      <a class="mobile-nav-cta" href="#booking">Book a Session</a>
+      <a class="mobile-nav-cta" href="#booking-calendar">Book a Session</a>
     </nav>
-    <a class="button button-primary header-cta" href="#booking">Book a Session</a>
+    <a class="button button-primary header-cta" href="#booking-calendar">Book a Session</a>
   </header>
 
   <main id="top">
@@ -84,7 +85,7 @@
             Find <span class="gold-word">gold</span> in your performance.
           </h1>
           <div class="button-row">
-            <a class="button button-primary" href="#booking">Book a One-to-One Session</a>
+            <a class="button button-primary" href="#booking-calendar">Book a One-to-One Session</a>
           </div>
         </div>
         <aside class="hero-panel" aria-label="Actors Alchemy transformation motif">
@@ -126,7 +127,7 @@
           <p class="eyebrow">Current offer</p>
           <h2 id="coaching-title">One-to-one coaching with Fraser</h2>
           <p>Focused online sessions, designed to help <span class="coaching-you">you</span> book the room.</p>
-          <a class="button button-copper" href="#booking">Book a Session</a>
+          <a class="button button-copper" href="#booking-calendar">Book a Session</a>
         </div>
         <div class="coaching-offer-panel">
           <ul class="coaching-list" aria-label="Coaching areas">
@@ -244,23 +245,27 @@
               <p class="eyebrow">Booking</p>
               <h2 id="booking-title">Book your session</h2>
             </div>
-            <p>Choose a preferred time, prepare your material and send a request. Fraser will confirm the session by email.</p>
+            <p>Choose a time in the calendar below, add your details and Google Calendar will confirm the session by email.</p>
           </div>
 
           <div class="booking-card">
-            <!-- Scheduler embed target: replace this div with Google Calendar Appointment Schedule, Calendly, Acuity or Cal.com. -->
             <div class="booking-embed" id="booking-embed" data-scheduler-target>
-              <div class="session-summary">
-                <span>Session type</span>
-                <strong>One-to-One Coaching</strong>
+              <div class="booking-calendar-panel">
+                <iframe
+                  id="booking-calendar"
+                  class="google-calendar-embed"
+                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0g_dRHZeRdO8E4UtYs_XI8L-Zts16q8S1w9GamopuZHjlWN6RJDGGHnVs0_v8Wgrbu8GyJbKvz?gv=true"
+                  title="Book an Actors Alchemy coaching session"
+                  frameborder="0"></iframe>
+                <a
+                  class="button button-secondary booking-calendar-link"
+                  href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0g_dRHZeRdO8E4UtYs_XI8L-Zts16q8S1w9GamopuZHjlWN6RJDGGHnVs0_v8Wgrbu8GyJbKvz?gv=true">Open Calendar in Google</a>
               </div>
               <div class="booking-details">
                 <p><span>Duration</span><strong>60 minutes</strong></p>
                 <p><span>Location</span><strong>Online</strong></p>
                 <p><span>Session fee</span><strong>£50</strong></p>
               </div>
-              <button class="button button-primary request-button" type="button">Request a Session</button>
-              <small>Calendar availability can connect to Google Calendar when a backend is added.</small>
             </div>
           </div>
         </div>
