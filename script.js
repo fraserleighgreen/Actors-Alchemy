@@ -19,9 +19,9 @@ const fraserFlipCards = Array.from(document.querySelectorAll(".fraser-flip-card"
 let activeTopicButton = null;
 
 const GOOGLE_BOOKING_URL = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0g_dRHZeRdO8E4UtYs_XI8L-Zts16q8S1w9GamopuZHjlWN6RJDGGHnVs0_v8Wgrbu8GyJbKvz?gv=true";
-const bookingCalendarAnchor = document.querySelector("#booking-calendar");
+const bookingSection = document.querySelector("#booking");
 const bookingCalendarEmbed = document.querySelector(".google-calendar-embed");
-const bookingAnchorLinks = Array.from(document.querySelectorAll('a[href="#booking-calendar"], a[href$="index.html#booking-calendar"]'));
+const bookingAnchorLinks = Array.from(document.querySelectorAll('a[href="#booking"], a[href$="index.html#booking"]'));
 
 const BOOKING_CONFIG = {
   timezone: "Europe/London",
@@ -61,27 +61,27 @@ function warmBookingCalendar() {
   }
 }
 
-function scrollToBookingCalendar(event) {
-  if (!bookingCalendarAnchor) return;
+function scrollToBookingSection(event) {
+  if (!bookingSection) return;
 
   const link = event.currentTarget;
   const href = link instanceof HTMLAnchorElement ? link.getAttribute("href") || "" : "";
-  const isSamePageBookingLink = href === "#booking-calendar";
+  const isSamePageBookingLink = href === "#booking";
 
   warmBookingCalendar();
 
   if (!isSamePageBookingLink) return;
 
   event.preventDefault();
-  bookingCalendarAnchor.scrollIntoView({ block: "start", behavior: "smooth" });
-  window.history.pushState(null, "", "#booking-calendar");
+  bookingSection.scrollIntoView({ block: "start", behavior: "auto" });
+  window.history.pushState(null, "", "#booking");
 }
 
 bookingAnchorLinks.forEach((link) => {
   link.addEventListener("pointerenter", warmBookingCalendar);
   link.addEventListener("focus", warmBookingCalendar);
   link.addEventListener("touchstart", warmBookingCalendar, { passive: true });
-  link.addEventListener("click", scrollToBookingCalendar);
+  link.addEventListener("click", scrollToBookingSection);
 });
 
 coachingTopicButtons.forEach((button) => {
@@ -464,6 +464,7 @@ const sections = sectionNavLinks
 
 initScrollSettle();
 initLazyVideos();
+initAlchemyCursor();
 
 if (sections.length) {
   const observer = new IntersectionObserver((entries) => {
@@ -590,4 +591,65 @@ function initLazyVideos() {
   });
 
   lazyVideos.forEach((video) => videoObserver.observe(video));
+}
+
+function initAlchemyCursor() {
+  const supportsFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const isCompactLayout = window.matchMedia("(max-width: 760px)").matches;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!supportsFinePointer || isCompactLayout || prefersReducedMotion) return;
+
+  const cursor = document.createElement("div");
+  cursor.className = "alchemy-cursor";
+  cursor.setAttribute("aria-hidden", "true");
+  cursor.innerHTML = '<span class="alchemy-cursor__ring"></span><span class="alchemy-cursor__mark"></span>';
+  document.body.appendChild(cursor);
+  document.documentElement.classList.add("has-alchemy-cursor");
+
+  const interactiveSelector = [
+    "a",
+    "button",
+    "input",
+    "textarea",
+    "select",
+    "summary",
+    "[role='button']",
+    ".fraser-flip-card",
+    ".coaching-topic",
+    ".stage-strip",
+  ].join(",");
+
+  const moveCursor = (event) => {
+    cursor.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
+    cursor.classList.add("is-visible");
+  };
+
+  const updateCursorState = (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    const overCalendar = Boolean(target?.closest(".google-calendar-embed"));
+    const isInteractive = Boolean(target?.closest(interactiveSelector));
+
+    cursor.classList.toggle("is-muted", overCalendar);
+    cursor.classList.toggle("is-interactive", isInteractive && !overCalendar);
+  };
+
+  window.addEventListener("pointermove", (event) => {
+    moveCursor(event);
+    updateCursorState(event);
+  }, { passive: true });
+
+  window.addEventListener("pointerdown", () => {
+    cursor.classList.add("is-pressed");
+  }, { passive: true });
+
+  window.addEventListener("pointerup", () => {
+    cursor.classList.remove("is-pressed");
+  }, { passive: true });
+
+  document.addEventListener("pointerleave", () => {
+    cursor.classList.remove("is-visible", "is-interactive", "is-pressed");
+  });
+
+  document.addEventListener("pointerover", updateCursorState, { passive: true });
 }
