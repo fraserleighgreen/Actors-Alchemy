@@ -530,16 +530,16 @@ main > .section > .container {
 }
 
 .wordmark span:last-child {
+  background: linear-gradient(180deg, var(--colour-alchemy-light) 0%, var(--colour-alchemy) 40%, var(--colour-alchemy-deep) 100%);
   color: var(--colour-alchemy);
   font-style: italic;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .wordmark-light {
   color: var(--colour-lead);
-}
-
-.wordmark-light span:last-child {
-  color: var(--colour-alchemy);
 }
 
 .menu-toggle {
@@ -576,6 +576,10 @@ main > .section > .container {
   color: var(--colour-taupe);
   font-size: 0.94rem;
   font-weight: 600;
+}
+
+.site-nav a:visited {
+  color: var(--colour-taupe);
 }
 
 .site-nav a:hover,
@@ -616,6 +620,12 @@ main > .section > .container {
 .site-nav .mobile-nav-cta:focus-visible {
   color: var(--colour-warm-white);
   transform: translateY(-1px);
+}
+
+.site-nav.is-open a:not(.mobile-nav-cta),
+.site-nav.is-open a:not(.mobile-nav-cta):visited,
+.site-nav.is-open a:not(.mobile-nav-cta).is-active {
+  color: var(--colour-taupe);
 }
 
 .header-cta {
