@@ -150,12 +150,26 @@ h1 {
 }
 
 .gold-word {
+  position: relative;
   display: inline-block;
   color: var(--colour-alchemy);
   line-height: 1.12;
   margin-bottom: -0.08em;
   padding: 0 0.02em 0.08em;
   transition: color 220ms var(--ease), filter 220ms var(--ease), text-shadow 220ms var(--ease), transform 220ms var(--ease);
+}
+
+.gold-word::after {
+  content: "";
+  position: absolute;
+  inset: -0.22em -0.24em -0.12em;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(circle at 18% 42%, rgba(255, 241, 184, 0.92) 0 0.055em, transparent 0.075em),
+    radial-gradient(circle at 52% 14%, rgba(214, 177, 106, 0.82) 0 0.048em, transparent 0.068em),
+    radial-gradient(circle at 82% 58%, rgba(255, 241, 184, 0.88) 0 0.052em, transparent 0.072em);
+  transform: translateY(0.08em) scale(0.92);
 }
 
 .gold-word:hover {
@@ -168,7 +182,11 @@ h1 {
   filter: saturate(1.06);
   text-shadow: 0 14px 34px rgba(184, 110, 67, 0.22);
   transform: translateY(-0.035em);
-  animation: gold-shimmer 1.35s var(--ease) both;
+  animation: gold-shimmer 1.65s var(--ease) both;
+}
+
+.gold-word:hover::after {
+  animation: gold-sparkle-dissolve 1.65s var(--ease) both;
 }
 
 h2 {
@@ -2534,11 +2552,44 @@ main > .section > .container {
 }
 
 @keyframes gold-shimmer {
-  from {
+  0% {
+    color: transparent;
     background-position: 100% 50%;
+    filter: saturate(1.08);
+    text-shadow: 0 14px 34px rgba(184, 110, 67, 0.22);
+    transform: translateY(-0.035em);
   }
-  to {
+  58% {
+    color: transparent;
     background-position: 0% 50%;
+    filter: saturate(1.08);
+  }
+  84% {
+    color: transparent;
+    background-position: -35% 50%;
+  }
+  100% {
+    color: var(--colour-alchemy);
+    background-position: -65% 50%;
+    filter: none;
+    text-shadow: none;
+    transform: none;
+  }
+}
+
+@keyframes gold-sparkle-dissolve {
+  0%,
+  44% {
+    opacity: 0;
+    transform: translateY(0.08em) scale(0.92);
+  }
+  62% {
+    opacity: 1;
+    transform: translateY(-0.02em) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-0.16em) scale(1.08);
   }
 }
 
