@@ -1048,8 +1048,9 @@ main > .section > .container {
 
 .testimonial-carousel {
   display: grid;
-  grid-template-columns: 2.75rem minmax(0, 1fr) 2.75rem;
-  gap: var(--space-4);
+  grid-template-columns: 2.75rem minmax(0, 42rem) 2.75rem;
+  justify-content: center;
+  gap: clamp(0.65rem, 1.6vw, 1rem);
   align-items: center;
 }
 
@@ -3066,6 +3067,17 @@ main > .section > .container {
   .google-calendar-embed {
     height: 41rem;
     min-height: 41rem;
+  }
+
+  .testimonial-carousel {
+    grid-template-columns: 2.35rem minmax(0, 1fr) 2.35rem;
+    gap: var(--space-2);
+  }
+
+  .testimonial-arrow {
+    width: 2.35rem;
+    height: 2.35rem;
+    font-size: 1.75rem;
   }
 
   .booking-anchor {
