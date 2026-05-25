@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=carousel">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -178,29 +178,35 @@
             <p class="eyebrow">Testimonials</p>
             <h2 id="testimonials-title">What performers take away from the session.</h2>
           </div>
-          <div class="testimonial-grid">
-            <figure class="testimonial-card">
-              <blockquote>Working with Fraser helped me to characterise and express freely, allowing me to connect with the material more than I ever had before. Fraser's guidance is insightful and encouraging, has developed my understanding of acting through song, and has provided me the tools to approach new material with confidence!</blockquote>
-              <figcaption class="testimonial-person">
-                <img src="assets/jamie-bailes.jpeg" alt="Headshot of Jamie Bailes" loading="lazy" decoding="async">
-                <span>
-                  <strong>Jamie Bailes</strong>
-                  <span>Acting through song</span>
-                </span>
-              </figcaption>
-              <p class="testimonial-outcome"><span>Booked</span> Original cast of Back to the Future</p>
-            </figure>
-            <figure class="testimonial-card">
-              <blockquote>Working with Fraser as my acting coach was really transformative. We focused a lot on scene work, and I saw a big improvement in my skills and confidence. Fraser is a fantastic teacher, very supportive, clear, and he really helped me grow as an actor. I'm so thankful for his guidance.</blockquote>
-              <figcaption class="testimonial-person">
-                <img src="assets/patricia-kuhne.jpeg" alt="Headshot of Patricia Kuhne" loading="lazy" decoding="async">
-                <span>
-                  <strong>Patricia K&uuml;hne</strong>
-                  <span>Scene work</span>
-                </span>
-              </figcaption>
-              <p class="testimonial-outcome"><span>Booked</span> TV &amp; Film</p>
-            </figure>
+          <div class="testimonial-carousel" data-testimonial-carousel>
+            <button class="testimonial-arrow testimonial-arrow--prev" type="button" aria-label="Previous testimonial" data-testimonial-prev>‹</button>
+            <div class="testimonial-carousel__viewport">
+              <div class="testimonial-grid" data-testimonial-track>
+                <figure class="testimonial-card">
+                  <blockquote>Working with Fraser helped me to characterise and express freely, allowing me to connect with the material more than I ever had before. Fraser's guidance is insightful and encouraging, has developed my understanding of acting through song, and has provided me the tools to approach new material with confidence!</blockquote>
+                  <figcaption class="testimonial-person">
+                    <img src="assets/jamie-bailes.jpeg" alt="Headshot of Jamie Bailes" loading="lazy" decoding="async">
+                    <span>
+                      <strong>Jamie Bailes</strong>
+                      <span>Acting through song</span>
+                    </span>
+                  </figcaption>
+                  <p class="testimonial-outcome"><span>Booked</span> Original cast of Back to the Future</p>
+                </figure>
+                <figure class="testimonial-card">
+                  <blockquote>Working with Fraser as my acting coach was really transformative. We focused a lot on scene work, and I saw a big improvement in my skills and confidence. Fraser is a fantastic teacher, very supportive, clear, and he really helped me grow as an actor. I'm so thankful for his guidance.</blockquote>
+                  <figcaption class="testimonial-person">
+                    <img src="assets/patricia-kuhne.jpeg" alt="Headshot of Patricia Kuhne" loading="lazy" decoding="async">
+                    <span>
+                      <strong>Patricia K&uuml;hne</strong>
+                      <span>Scene work</span>
+                    </span>
+                  </figcaption>
+                  <p class="testimonial-outcome"><span>Booked</span> TV &amp; Film</p>
+                </figure>
+              </div>
+            </div>
+            <button class="testimonial-arrow testimonial-arrow--next" type="button" aria-label="Next testimonial" data-testimonial-next>›</button>
           </div>
         </div>
       </div>
@@ -434,5 +440,45 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    (() => {
+      const carousel = document.querySelector("[data-testimonial-carousel]");
+      const track = document.querySelector("[data-testimonial-track]");
+      const prevButton = document.querySelector("[data-testimonial-prev]");
+      const nextButton = document.querySelector("[data-testimonial-next]");
+
+      if (!carousel || !track || !prevButton || !nextButton || carousel.dataset.carouselReady === "true") return;
+
+      const slides = Array.from(track.querySelectorAll(".testimonial-card"));
+      if (slides.length <= 1) return;
+
+      let activeIndex = 0;
+      carousel.dataset.carouselReady = "true";
+
+      const getSlideOffset = () => {
+        const gap = parseFloat(window.getComputedStyle(track).gap || "0") || 0;
+        return slides[0].getBoundingClientRect().width + gap;
+      };
+
+      const updateCarousel = () => {
+        track.style.transform = `translateX(-${activeIndex * getSlideOffset()}px)`;
+        slides.forEach((slide, index) => {
+          const isActive = index === activeIndex;
+          slide.setAttribute("aria-hidden", String(!isActive));
+          slide.tabIndex = isActive ? 0 : -1;
+        });
+      };
+
+      const moveCarousel = (direction) => {
+        activeIndex = (activeIndex + direction + slides.length) % slides.length;
+        updateCarousel();
+      };
+
+      prevButton.addEventListener("click", () => moveCarousel(-1));
+      nextButton.addEventListener("click", () => moveCarousel(1));
+      window.addEventListener("resize", updateCarousel);
+      updateCarousel();
+    })();
+  </script>
 </body>
 </html>

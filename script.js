@@ -16,7 +16,12 @@ const coachingTopicModal = document.querySelector("#coaching-topic-modal");
 const coachingTopicTitle = document.querySelector("#coaching-topic-title");
 const coachingTopicDescription = document.querySelector("[data-topic-description]");
 const fraserFlipCards = Array.from(document.querySelectorAll(".fraser-flip-card"));
+const testimonialCarousel = document.querySelector("[data-testimonial-carousel]");
+const testimonialTrack = document.querySelector("[data-testimonial-track]");
+const testimonialPrev = document.querySelector("[data-testimonial-prev]");
+const testimonialNext = document.querySelector("[data-testimonial-next]");
 let activeTopicButton = null;
+let activeTestimonialIndex = 0;
 
 const GOOGLE_BOOKING_URL = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0g_dRHZeRdO8E4UtYs_XI8L-Zts16q8S1w9GamopuZHjlWN6RJDGGHnVs0_v8Wgrbu8GyJbKvz?gv=true";
 const bookingSection = document.querySelector("#booking");
@@ -93,6 +98,9 @@ bookingAnchorLinks.forEach((link) => {
   link.addEventListener("touchstart", warmBookingCalendar, { passive: true });
   link.addEventListener("click", scrollToBookingSection);
 });
+
+initTestimonialCarousel();
+window.addEventListener("load", initTestimonialCarousel);
 
 function formatCurrency(amount) {
   return new Intl.NumberFormat("en-GB", {
@@ -542,6 +550,48 @@ if (sections.length) {
   });
 
   sections.forEach((section) => observer.observe(section));
+}
+
+function initTestimonialCarousel() {
+  const carousel = document.querySelector("[data-testimonial-carousel]");
+  const track = document.querySelector("[data-testimonial-track]");
+  const prevButton = document.querySelector("[data-testimonial-prev]");
+  const nextButton = document.querySelector("[data-testimonial-next]");
+
+  if (!carousel || !track || !prevButton || !nextButton || carousel.dataset.carouselReady === "true") return;
+
+  const slides = Array.from(track.querySelectorAll(".testimonial-card"));
+  if (slides.length <= 1) return;
+
+  carousel.dataset.carouselReady = "true";
+
+  const getSlideOffset = () => {
+    const slide = slides[0];
+    const trackStyles = window.getComputedStyle(track);
+    const gap = Number.parseFloat(trackStyles.columnGap || trackStyles.gap || "0") || 0;
+    return slide.getBoundingClientRect().width + gap;
+  };
+
+  const updateCarousel = () => {
+    track.style.transform = `translateX(-${activeTestimonialIndex * getSlideOffset()}px)`;
+
+    slides.forEach((slide, index) => {
+      const isActive = index === activeTestimonialIndex;
+      slide.setAttribute("aria-hidden", String(!isActive));
+      slide.tabIndex = isActive ? 0 : -1;
+    });
+  };
+
+  const moveCarousel = (direction) => {
+    activeTestimonialIndex = (activeTestimonialIndex + direction + slides.length) % slides.length;
+    updateCarousel();
+  };
+
+  prevButton.addEventListener("click", () => moveCarousel(-1));
+  nextButton.addEventListener("click", () => moveCarousel(1));
+  window.addEventListener("resize", updateCarousel);
+
+  updateCarousel();
 }
 
 function initScrollSettle() {
