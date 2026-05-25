@@ -331,6 +331,17 @@
                 <p><span>Location</span><strong>Online</strong></p>
                 <p><span>Session fee</span><strong>£50</strong></p>
               </div>
+              <form class="discount-checker" data-discount-checker>
+                <div>
+                  <p class="discount-checker__label">Discount code check</p>
+                </div>
+                <label class="discount-checker__field">
+                  <span>Code</span>
+                  <input type="text" name="discount-code" autocomplete="off" placeholder="Gold" data-discount-input>
+                </label>
+                <button class="button button-secondary discount-checker__button" type="submit">Apply</button>
+                <p class="discount-checker__result" data-discount-result aria-live="polite">Standard session fee: £50</p>
+              </form>
             </div>
           </div>
         </div>

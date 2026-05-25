@@ -1387,6 +1387,126 @@ main > .section > .container {
   color: var(--colour-taupe);
 }
 
+.discount-checker {
+  display: grid;
+  gap: var(--space-3);
+  align-items: end;
+  padding: var(--space-3);
+  border: 1px solid rgba(166, 106, 67, 0.2);
+  border-radius: var(--radius-md);
+  background: rgba(239, 230, 215, 0.42);
+}
+
+.discount-checker__label {
+  margin: 0 0 var(--space-1);
+  color: var(--colour-lead);
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.1;
+}
+
+.discount-checker__copy,
+.discount-checker__result {
+  margin: 0;
+  color: var(--colour-taupe);
+  font-size: 0.92rem;
+}
+
+.discount-checker__field {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.discount-checker__field span {
+  color: var(--colour-taupe);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.discount-checker__field input {
+  width: 100%;
+  min-height: 2.85rem;
+  border: 1px solid rgba(206, 194, 178, 0.9);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 252, 247, 0.92);
+  color: var(--colour-lead);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 0.85rem;
+  text-transform: uppercase;
+}
+
+.discount-checker__field input:focus {
+  border-color: var(--colour-clay);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(184, 110, 67, 0.14);
+}
+
+.discount-checker__button {
+  min-height: 2.85rem;
+}
+
+.discount-checker__result {
+  padding-top: var(--space-1);
+  font-weight: 700;
+}
+
+.discount-checker__result.is-valid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  align-items: baseline;
+  color: var(--colour-copper);
+}
+
+.discount-checker__result.is-invalid {
+  color: var(--colour-lead);
+}
+
+.discount-checker__old-price {
+  position: relative;
+  display: inline-block;
+  color: var(--colour-taupe);
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.discount-checker__old-price::after {
+  content: "";
+  position: absolute;
+  left: -0.16em;
+  right: -0.16em;
+  top: 52%;
+  height: 0.13rem;
+  border-radius: 999px;
+  background: var(--colour-copper);
+  transform: rotate(-7deg);
+  transform-origin: center;
+}
+
+.discount-checker__new-price {
+  color: var(--colour-copper);
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 4vw, 2.2rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.discount-checker__note {
+  color: var(--colour-taupe);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .booking-calendar-panel {
   display: grid;
   gap: var(--space-3);
@@ -1405,8 +1525,8 @@ main > .section > .container {
 
 .google-calendar-embed {
   width: 100%;
-  height: min(64rem, calc(100vh + 16rem));
-  min-height: 56rem;
+  height: clamp(40rem, 82vh, 46rem);
+  min-height: 40rem;
   border: 0;
   border-radius: var(--radius-sm);
   background: var(--colour-warm-white);
@@ -2813,6 +2933,14 @@ main > .section > .container {
     gap: var(--space-3);
   }
 
+  .discount-checker {
+    grid-template-columns: minmax(0, 1fr) minmax(9rem, 0.34fr) auto;
+  }
+
+  .discount-checker__result {
+    grid-column: 1 / -1;
+  }
+
   .calendar-card {
     grid-row: 1 / span 2;
   }
@@ -2897,8 +3025,8 @@ main > .section > .container {
   }
 
   .google-calendar-embed {
-    height: 48rem;
-    min-height: 48rem;
+    height: 41rem;
+    min-height: 41rem;
   }
 
   .booking-anchor {

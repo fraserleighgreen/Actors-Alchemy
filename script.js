@@ -22,6 +22,16 @@ const GOOGLE_BOOKING_URL = "https://calendar.google.com/calendar/appointments/sc
 const bookingSection = document.querySelector("#booking");
 const bookingCalendarEmbed = document.querySelector(".google-calendar-embed");
 const bookingAnchorLinks = Array.from(document.querySelectorAll('a[href="#booking"], a[href$="index.html#booking"]'));
+const discountChecker = document.querySelector("[data-discount-checker]");
+const discountInput = document.querySelector("[data-discount-input]");
+const discountResult = document.querySelector("[data-discount-result]");
+
+const SESSION_FEE = 50;
+const DISCOUNT_CODES = {
+  GOLD30: {
+    percentage: 30,
+  },
+};
 
 const BOOKING_CONFIG = {
   timezone: "Europe/London",
@@ -82,6 +92,56 @@ bookingAnchorLinks.forEach((link) => {
   link.addEventListener("focus", warmBookingCalendar);
   link.addEventListener("touchstart", warmBookingCalendar, { passive: true });
   link.addEventListener("click", scrollToBookingSection);
+});
+
+function formatCurrency(amount) {
+  return new Intl.NumberFormat("en-GB", {
+    style: "currency",
+    currency: "GBP",
+    maximumFractionDigits: Number.isInteger(amount) ? 0 : 2,
+  }).format(amount);
+}
+
+function checkDiscountCode(event) {
+  event?.preventDefault();
+
+  if (!discountInput || !discountResult) return;
+
+  const code = discountInput.value.trim().toUpperCase();
+  const discount = DISCOUNT_CODES[code];
+
+  discountResult.classList.remove("is-valid", "is-invalid");
+
+  if (!code) {
+    discountResult.textContent = `Standard session fee: ${formatCurrency(SESSION_FEE)}`;
+    return;
+  }
+
+  if (!discount) {
+    discountResult.textContent = `Code not recognised. Standard session fee: ${formatCurrency(SESSION_FEE)}`;
+    discountResult.classList.add("is-invalid");
+    return;
+  }
+
+  const discountedFee = SESSION_FEE * (1 - discount.percentage / 100);
+  discountResult.innerHTML = `
+    <span class="discount-checker__old-price">${formatCurrency(SESSION_FEE)}</span>
+    <span class="discount-checker__new-price">${formatCurrency(discountedFee)}</span>
+  `;
+  discountResult.classList.add("is-valid");
+}
+
+discountChecker?.addEventListener("submit", checkDiscountCode);
+discountInput?.addEventListener("focus", () => {
+  discountInput.setAttribute("placeholder", "");
+});
+discountInput?.addEventListener("blur", () => {
+  if (!discountInput.value.trim()) {
+    discountInput.setAttribute("placeholder", "Gold");
+  }
+});
+discountInput?.addEventListener("input", () => {
+  if (!discountInput.value.trim()) checkDiscountCode();
 });
 
 coachingTopicButtons.forEach((button) => {
