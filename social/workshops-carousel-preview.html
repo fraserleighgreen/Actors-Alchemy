@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actors Alchemy Workshop Carousel Preview</title>
+  <style>
+    :root {
+      --graphite: #24211d;
+      --oat: #e8ddce;
+      --rust: #9b512f;
+      --gold: #c99a4a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--graphite);
+      color: var(--oat);
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(201, 154, 74, 0.35);
+      background: rgba(36, 33, 29, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: clamp(1.25rem, 2.8vw, 2rem);
+      font-weight: 700;
+    }
+
+    .meta {
+      margin: 0;
+      color: rgba(232, 221, 206, 0.72);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    main {
+      display: grid;
+      gap: 2rem;
+      width: min(100%, 78rem);
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .slide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: 1rem;
+      align-items: start;
+    }
+
+    figure {
+      margin: 0;
+      border: 1px solid rgba(201, 154, 74, 0.35);
+      background: rgba(232, 221, 206, 0.05);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      padding: 0.75rem 0.85rem;
+      color: rgba(232, 221, 206, 0.78);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Workshop Carousel Preview</h1>
+    <p class="meta">9 individual Instagram slides</p>
+  </header>
+
+  <main>
+    <section class="slide-grid" aria-label="Actors Alchemy workshop carousel slides">
+      <figure>
+        <img src="workshops-carousel/actors-alchemy-workshops-carousel-01.png" alt="Carousel slide 1">
+        <figcaption>Slide 01</figcaption>
+      </figure>
+      <figure>
+        <img src="workshops-carousel/actors-alchemy-workshops-carousel-02.png" alt="Carousel slide 2">
+        <figcaption>Slide 02</figcaption>
+      </figure>
+      <figure>
+        <img src="workshops-carousel/actors-alchemy-workshops-carousel-03.png" alt="Carousel slide 3">
+        <figcaption>Slide 03</figcaption>
+      </figure>
+      <figure>
+        <img src="workshops-carousel/actors-alchemy-workshops-carousel-04.png" alt="Carousel slide 4">
+        <figcaption>Slide 04</figcaption>
+      </figure>
+      <figure>
+        <img src="workshops-carousel/actors-alchemy-workshops-carousel-05.png" alt="Carousel slide 5">
+        <figcaption>Slide 05</figcaption>
+      </figure>
+      <figure>
+        <img src="workshops-carousel/actors-alchemy-workshops-carousel-06.png" alt="Carousel slide 6">
+        <figcaption>Slide 06</figcaption>
+      </figure>
+      <figure>
+        <img src="workshops-carousel/actors-alchemy-workshops-carousel-07.png" alt="Carousel slide 7">
+        <figcaption>Slide 07</figcaption>
+      </figure>
+      <figure>
+        <img src="workshops-carousel/actors-alchemy-workshops-carousel-08.png" alt="Carousel slide 8">
+        <figcaption>Slide 08</figcaption>
+      </figure>
+      <figure>
+        <img src="workshops-carousel/actors-alchemy-workshops-carousel-09.png" alt="Carousel slide 9">
+        <figcaption>Slide 09</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>

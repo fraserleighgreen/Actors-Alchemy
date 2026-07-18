@@ -72,7 +72,7 @@ function warmBookingCalendar() {
   if (!bookingCalendarEmbed) return;
 
   if (!bookingCalendarEmbed.getAttribute("src")) {
-    bookingCalendarEmbed.setAttribute("src", GOOGLE_BOOKING_URL);
+    bookingCalendarEmbed.setAttribute("src", bookingCalendarEmbed.dataset.src || GOOGLE_BOOKING_URL);
   }
 }
 
@@ -98,6 +98,24 @@ bookingAnchorLinks.forEach((link) => {
   link.addEventListener("touchstart", warmBookingCalendar, { passive: true });
   link.addEventListener("click", scrollToBookingSection);
 });
+
+if (bookingSection && bookingCalendarEmbed) {
+  if ("IntersectionObserver" in window) {
+    const bookingWarmObserver = new IntersectionObserver(
+      (entries, observer) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          warmBookingCalendar();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "700px 0px", threshold: 0.01 },
+    );
+
+    bookingWarmObserver.observe(bookingSection);
+  } else {
+    window.addEventListener("load", warmBookingCalendar, { once: true });
+  }
+}
 
 initTestimonialCarousel();
 window.addEventListener("load", initTestimonialCarousel);

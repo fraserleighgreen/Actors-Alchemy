@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actors Alchemy Workshop Offerings Carousel</title>
+  <style>
+    :root {
+      --graphite: #3c3832;
+      --charcoal: #28241f;
+      --warm: #f8f3eb;
+      --parchment: #efe6d7;
+      --oat: #d4c4af;
+      --rust: #9d693d;
+      --gold: #d6b16a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--charcoal);
+      color: var(--warm);
+      font-family: "DM Sans", Arial, sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(214, 177, 106, 0.36);
+      background: rgba(40, 36, 31, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.35rem, 3vw, 2.2rem);
+      font-weight: 500;
+    }
+
+    .meta {
+      margin: 0;
+      color: rgba(248, 243, 235, 0.72);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    main {
+      width: min(100%, 82rem);
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .slide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+      gap: 1.25rem;
+    }
+
+    figure {
+      margin: 0;
+      border: 1px solid rgba(214, 177, 106, 0.34);
+      background: rgba(248, 243, 235, 0.05);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 0.85rem;
+      color: rgba(248, 243, 235, 0.76);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Workshop Offerings Carousel</h1>
+    <p class="meta">7 individual square slides</p>
+  </header>
+
+  <main>
+    <section class="slide-grid" aria-label="Actors Alchemy workshop offering carousel slides">
+      <figure>
+        <img src="workshop-offerings-carousel/actors-alchemy-workshop-offerings-01.png" alt="Slide 1: Your bridge between training and the industry">
+        <figcaption><span>Slide 01</span><span>Cover</span></figcaption>
+      </figure>
+      <figure>
+        <img src="workshop-offerings-carousel/actors-alchemy-workshop-offerings-02.png" alt="Slide 2: The Mock Audition">
+        <figcaption><span>Slide 02</span><span>Mock Audition</span></figcaption>
+      </figure>
+      <figure>
+        <img src="workshop-offerings-carousel/actors-alchemy-workshop-offerings-03.png" alt="Slide 3: The Mindset Mentor">
+        <figcaption><span>Slide 03</span><span>Mindset</span></figcaption>
+      </figure>
+      <figure>
+        <img src="workshop-offerings-carousel/actors-alchemy-workshop-offerings-04.png" alt="Slide 4: The Company Code">
+        <figcaption><span>Slide 04</span><span>Company Code</span></figcaption>
+      </figure>
+      <figure>
+        <img src="workshop-offerings-carousel/actors-alchemy-workshop-offerings-05.png" alt="Slide 5: Self-Tape Synthesis">
+        <figcaption><span>Slide 05</span><span>Self-Tape</span></figcaption>
+      </figure>
+      <figure>
+        <img src="workshop-offerings-carousel/actors-alchemy-workshop-offerings-06.png" alt="Slide 6: Ship Shape: Cruise 101">
+        <figcaption><span>Slide 06</span><span>Ship Shape</span></figcaption>
+      </figure>
+      <figure>
+        <img src="workshop-offerings-carousel/actors-alchemy-workshop-offerings-07.png" alt="Slide 7: The Q&A and flexible delivery">
+        <figcaption><span>Slide 07</span><span>Q&amp;A</span></figcaption>
+      </figure>
+    </section>
+  </main>
+  <script>
+    const cacheKey = new URLSearchParams(window.location.search).toString() || Date.now().toString();
+    document.querySelectorAll("img").forEach((image) => {
+      const source = image.getAttribute("src");
+      if (source && !source.includes("?")) {
+        image.src = `${source}?v=${encodeURIComponent(cacheKey)}`;
+      }
+    });
+  </script>
+</body>
+</html>

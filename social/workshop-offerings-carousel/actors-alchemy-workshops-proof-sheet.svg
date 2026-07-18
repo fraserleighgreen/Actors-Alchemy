@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720">
+    <rect width="1440" height="720" fill="#f8f3eb"/>
+    <image href="actors-alchemy-workshops-01.svg" x="0" y="0" width="360" height="360"/>
+<image href="actors-alchemy-workshops-02.svg" x="360" y="0" width="360" height="360"/>
+<image href="actors-alchemy-workshops-03.svg" x="720" y="0" width="360" height="360"/>
+<image href="actors-alchemy-workshops-04.svg" x="1080" y="0" width="360" height="360"/>
+<image href="actors-alchemy-workshops-05.svg" x="0" y="360" width="360" height="360"/>
+<image href="actors-alchemy-workshops-06.svg" x="360" y="360" width="360" height="360"/>
+<image href="actors-alchemy-workshops-07.svg" x="720" y="360" width="360" height="360"/>
+  </svg>

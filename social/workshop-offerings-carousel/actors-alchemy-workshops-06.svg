@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="96"/>
+      <feColorMatrix values="0 0 0 0 0.12 0 0 0 0 0.10 0 0 0 0 0.08 0 0 0 0.07 0"/>
+    </filter>
+    <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d6b16a" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#d6b16a" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#d6b16a" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .brand, .heading { font-family: Georgia, "Times New Roman", serif; letter-spacing: 0; }
+      .note { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 500; letter-spacing: 0; }
+      .body { font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; letter-spacing: 0; }
+      .eyebrow { font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-weight: 700; letter-spacing: 4px; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#f1e7d9"/>
+  <rect width="1080" height="1080" fill="#eadfce" opacity="0.28" filter="url(#paper)"/>
+  <circle cx="124" cy="170" r="250" fill="#cfbaa1" opacity="0.13"/>
+  <circle cx="918" cy="880" r="310" fill="#cfbaa1" opacity="0.13"/>
+  <path d="M205 172 C171 292 241 402 205 530 C171 654 241 770 205 908" fill="none" stroke="#d6b16a" stroke-width="2" stroke-opacity="0.5"/>
+  <path d="M243 176 C209 300 265 414 237 540 C203 660 263 780 235 910" fill="none" stroke="#b99f84" stroke-width="1.5" stroke-opacity="0.72"/>
+  <image href="/Users/fraserleighgreen/Desktop/MISC2026/2026/Videos/General Videos/Fraser Leigh Green/Actors Alchemy/assets/actors-alchemy-icon.svg" x="64" y="620" width="190" height="281" opacity="0.063" preserveAspectRatio="xMidYMid meet"/>
+
+  <rect x="58" y="58" width="964" height="964" fill="none" stroke="#cdbba4" stroke-width="2" opacity="1"/>
+  <rect x="88" y="88" width="904" height="904" fill="none" stroke="#d6b16a" stroke-opacity="0.38" stroke-width="1"/>
+  <image href="/Users/fraserleighgreen/Desktop/MISC2026/2026/Videos/General Videos/Fraser Leigh Green/Actors Alchemy/assets/actors-alchemy-logo-wordmark.png" x="300.56" y="73.52000000000001" width="478.88" height="103.32" preserveAspectRatio="xMidYMid meet"/>
+
+  <text class="eyebrow" x="540" y="246" font-size="21" fill="#9d693d" text-anchor="middle">WORKSHOP 05</text>
+  <line x1="328" y1="284" x2="752" y2="284" stroke="url(#goldLine)" stroke-width="3"/>
+
+  <g transform="translate(0 378)">
+    <text class="heading" x="540" y="0" font-size="80" font-weight="500" fill="#3c3832" text-anchor="middle" opacity="1">Ship Shape:</text>
+<text class="heading" x="540" y="74" font-size="80" font-weight="500" fill="#3c3832" text-anchor="middle" opacity="1">Cruise 101</text>
+  </g>
+
+  
+
+  <g transform="translate(128 534)">
+    <rect width="824" height="250" fill="#fbf4e9" fill-opacity="0.2" stroke="#9d693d" stroke-opacity="0.38" stroke-width="1.5"/>
+    <text class="note" x="412" y="68" font-size="31" font-weight="400" fill="#9d693d" text-anchor="middle" opacity="1" font-style="italic">A practical introduction to cruise auditions</text>
+<text class="note" x="412" y="106" font-size="31" font-weight="400" fill="#9d693d" text-anchor="middle" opacity="1" font-style="italic">and life inside the contract, tailored towards</text>
+<text class="note" x="412" y="144" font-size="31" font-weight="400" fill="#9d693d" text-anchor="middle" opacity="1" font-style="italic">singers and dancers.</text>
+    
+    
+  </g>
+
+  <g>
+        <circle cx="144" cy="818" r="5" fill="#9d693d" opacity="0.95"/>
+        <text class="heading" x="164" y="826" font-size="31" font-weight="500" fill="#9d693d" opacity="0.97">performance quality</text>
+      </g>
+<g>
+        <circle cx="554" cy="818" r="5" fill="#9d693d" opacity="0.95"/>
+        <text class="heading" x="574" y="826" font-size="31" font-weight="500" fill="#9d693d" opacity="0.97">recall material</text>
+      </g>
+<g>
+        <circle cx="144" cy="876" r="5" fill="#9d693d" opacity="0.95"/>
+        <text class="heading" x="164" y="884" font-size="31" font-weight="500" fill="#9d693d" opacity="0.97">visa &amp; travel</text>
+      </g>
+<g>
+        <circle cx="554" cy="876" r="5" fill="#9d693d" opacity="0.95"/>
+        <text class="heading" x="574" y="884" font-size="31" font-weight="500" fill="#9d693d" opacity="0.97">life on board</text>
+      </g>
+<g>
+        <circle cx="144" cy="934" r="5" fill="#9d693d" opacity="0.95"/>
+        <text class="heading" x="164" y="942" font-size="31" font-weight="500" fill="#9d693d" opacity="0.97">working with movement</text>
+      </g>
+<g>
+        <circle cx="554" cy="934" r="5" fill="#9d693d" opacity="0.95"/>
+        <text class="heading" x="574" y="942" font-size="31" font-weight="500" fill="#9d693d" opacity="0.97">exploring rehearsals</text>
+      </g>
+
+  
+
+  
+  
+</svg>

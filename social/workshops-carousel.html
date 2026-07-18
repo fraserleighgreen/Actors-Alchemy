@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actors Alchemy Workshops Instagram Carousel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --charcoal: #28241f;
+      --lead: #3c3832;
+      --parchment: #efe6d7;
+      --warm-white: #f8f3eb;
+      --oat: #e8ddce;
+      --oat-deep: #d4c4af;
+      --alchemy: #9d693d;
+      --alchemy-deep: #7e4d2c;
+      --copper: #b86e43;
+      --gold: #d6b16a;
+      --soft-grey: #cec2b2;
+      --font-heading: "Cormorant Garamond", Georgia, serif;
+      --font-body: "DM Sans", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #171411;
+      color: var(--lead);
+      font-family: var(--font-body);
+    }
+
+    .carousel-board {
+      display: grid;
+      gap: 32px;
+      padding: 32px;
+    }
+
+    .slide {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      padding: 78px;
+      background:
+        linear-gradient(rgba(248, 243, 235, 0.92), rgba(248, 243, 235, 0.92)),
+        url("../assets/texture-paper.svg"),
+        var(--warm-white);
+      isolation: isolate;
+    }
+
+    .slide::before,
+    .slide::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border-radius: 999px;
+      pointer-events: none;
+    }
+
+    .slide::before {
+      width: 560px;
+      height: 560px;
+      right: -210px;
+      top: -180px;
+      background: rgba(184, 110, 67, 0.14);
+    }
+
+    .slide::after {
+      width: 420px;
+      height: 420px;
+      left: -190px;
+      bottom: -150px;
+      background: rgba(214, 177, 106, 0.16);
+    }
+
+    .slide-dark {
+      color: var(--warm-white);
+      background:
+        linear-gradient(145deg, rgba(40, 36, 31, 0.96), rgba(60, 56, 50, 0.94)),
+        url("../assets/texture-paper.svg"),
+        var(--charcoal);
+    }
+
+    .slide-dark::before {
+      background: rgba(214, 177, 106, 0.16);
+    }
+
+    .slide-dark::after {
+      background: rgba(184, 110, 67, 0.18);
+    }
+
+    .slide-photo {
+      color: var(--warm-white);
+      background:
+        linear-gradient(180deg, rgba(40, 36, 31, 0.24), rgba(40, 36, 31, 0.9)),
+        url("../assets/stage-reel-stage-1.jpg") center / cover,
+        var(--charcoal);
+    }
+
+    .slide-photo::before,
+    .slide-photo::after {
+      display: none;
+    }
+
+    .topline,
+    .footerline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      color: inherit;
+    }
+
+    .brand {
+      width: 226px;
+      height: auto;
+    }
+
+    .slide-dark .brand,
+    .slide-photo .brand {
+      filter: brightness(0) invert(1);
+    }
+
+    .kicker {
+      margin: 0;
+      color: var(--alchemy-deep);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .slide-dark .kicker,
+    .slide-photo .kicker {
+      color: var(--gold);
+    }
+
+    .count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 76px;
+      border: 1px solid rgba(117, 103, 91, 0.4);
+      border-radius: 50%;
+      color: var(--alchemy-deep);
+      font-family: var(--font-heading);
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .slide-dark .count,
+    .slide-photo .count {
+      border-color: rgba(239, 230, 215, 0.34);
+      color: var(--gold);
+    }
+
+    .content {
+      display: grid;
+      gap: 34px;
+    }
+
+    .title {
+      max-width: 870px;
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 104px;
+      font-weight: 600;
+      line-height: 0.92;
+      letter-spacing: 0;
+    }
+
+    .title-medium {
+      font-size: 92px;
+    }
+
+    .title-small {
+      font-size: 82px;
+    }
+
+    .lede {
+      max-width: 850px;
+      margin: 0;
+      color: rgba(60, 56, 50, 0.86);
+      font-size: 36px;
+      line-height: 1.28;
+      font-weight: 500;
+    }
+
+    .slide-dark .lede,
+    .slide-photo .lede {
+      color: rgba(248, 243, 235, 0.9);
+    }
+
+    .supporting {
+      max-width: 840px;
+      margin: 0;
+      color: rgba(60, 56, 50, 0.78);
+      font-size: 30px;
+      line-height: 1.34;
+    }
+
+    .slide-dark .supporting,
+    .slide-photo .supporting {
+      color: rgba(248, 243, 235, 0.78);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pill-row li {
+      padding: 13px 20px 15px;
+      border: 1px solid rgba(117, 103, 91, 0.3);
+      border-radius: 999px;
+      background: rgba(248, 243, 235, 0.56);
+      color: var(--lead);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .slide-dark .pill-row li,
+    .slide-photo .pill-row li {
+      border-color: rgba(239, 230, 215, 0.28);
+      background: rgba(248, 243, 235, 0.08);
+      color: var(--warm-white);
+    }
+
+    .duration {
+      margin: 0;
+      justify-self: start;
+      padding: 16px 22px;
+      border-radius: 8px;
+      background: var(--charcoal);
+      color: var(--warm-white);
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .slide-dark .duration,
+    .slide-photo .duration {
+      background: var(--gold);
+      color: var(--charcoal);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 330px;
+      gap: 54px;
+      align-items: end;
+    }
+
+    .number-mark {
+      color: rgba(157, 105, 61, 0.18);
+      font-family: var(--font-heading);
+      font-size: 300px;
+      font-weight: 600;
+      line-height: 0.74;
+      text-align: right;
+    }
+
+    .slide-dark .number-mark {
+      color: rgba(214, 177, 106, 0.16);
+    }
+
+    .closing-card {
+      display: grid;
+      gap: 26px;
+      padding: 40px;
+      border: 1px solid rgba(117, 103, 91, 0.22);
+      border-radius: 8px;
+      background: rgba(248, 243, 235, 0.62);
+    }
+
+    .slide-dark .closing-card {
+      border-color: rgba(239, 230, 215, 0.22);
+      background: rgba(248, 243, 235, 0.08);
+    }
+
+    .footerline {
+      color: rgba(60, 56, 50, 0.68);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .slide-dark .footerline,
+    .slide-photo .footerline {
+      color: rgba(248, 243, 235, 0.72);
+    }
+
+    .photo-credit {
+      color: rgba(248, 243, 235, 0.72);
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="carousel-board">
+    <section class="slide slide-photo" data-slide="01">
+      <div class="topline">
+        <img class="brand" src="../assets/actors-alchemy-logo-lockup.png" alt="Actors Alchemy">
+        <span class="count">01</span>
+      </div>
+      <div class="content">
+        <p class="kicker">Drama school to the industry</p>
+        <h1 class="title">Your bridge between training and the industry.</h1>
+        <p class="lede">Practical, caring and no-nonsense workshops for performers in training.</p>
+      </div>
+      <div class="footerline">
+        <span>Workshop offerings</span>
+        <span class="photo-credit">Photo: Mark Senior</span>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="02">
+      <div class="topline">
+        <img class="brand" src="../assets/actors-alchemy-logo-lockup.png" alt="Actors Alchemy">
+        <span class="count">02</span>
+      </div>
+      <div class="content">
+        <p class="kicker">The aim</p>
+        <h2 class="title title-medium">Refine the work. Ready the performer.</h2>
+        <p class="lede">Created by industry-leading performers, these sessions help students strengthen their relationship to the work, themselves and the industry ahead.</p>
+        <ul class="pill-row">
+          <li>deep dives</li>
+          <li>performer-led workshops</li>
+          <li>mock audition simulation</li>
+          <li>clearer choices</li>
+          <li>professional confidence</li>
+        </ul>
+      </div>
+      <div class="footerline">
+        <span>Actors Alchemy</span>
+        <span>02 / 09</span>
+      </div>
+    </section>
+
+    <section class="slide slide-dark" data-slide="03">
+      <div class="topline">
+        <img class="brand" src="../assets/actors-alchemy-logo-lockup.png" alt="Actors Alchemy">
+        <span class="count">03</span>
+      </div>
+      <div class="split">
+        <div class="content">
+          <p class="kicker">Workshop 01</p>
+          <h2 class="title title-medium">The Mock Audition</h2>
+          <p class="lede">A simulated audition experience helping students understand the room and their place in it.</p>
+          <p class="supporting">We explore 32 bars, a movement combination and the practical choices that help a performer stay present under pressure.</p>
+          <ul class="pill-row">
+            <li>32 bars</li>
+            <li>movement combination</li>
+            <li>breaking down text</li>
+            <li>panel etiquette</li>
+            <li>redirection</li>
+            <li>nerves</li>
+          </ul>
+          <p class="duration">Proposed length: 2 hrs</p>
+        </div>
+        <div class="number-mark">01</div>
+      </div>
+      <div class="footerline">
+        <span>Workshop offerings</span>
+        <span>03 / 09</span>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="04">
+      <div class="topline">
+        <img class="brand" src="../assets/actors-alchemy-logo-lockup.png" alt="Actors Alchemy">
+        <span class="count">04</span>
+      </div>
+      <div class="split">
+        <div class="content">
+          <p class="kicker">Workshop 02</p>
+          <h2 class="title title-medium">The Mindset Mentor</h2>
+          <p class="lede">A practical workshop for nerves, pressure, self-trust and performance anxiety.</p>
+          <p class="supporting">Students begin to understand their own programming, build grounded confidence and trust the preparation they have already done.</p>
+          <ul class="pill-row">
+            <li>grounding tools</li>
+            <li>confidence without ego</li>
+            <li>emotional regulation</li>
+            <li>presence</li>
+            <li>resilience</li>
+          </ul>
+          <p class="duration">Proposed length: 1 hr</p>
+        </div>
+        <div class="number-mark">02</div>
+      </div>
+      <div class="footerline">
+        <span>Workshop offerings</span>
+        <span>04 / 09</span>
+      </div>
+    </section>
+
+    <section class="slide slide-dark" data-slide="05">
+      <div class="topline">
+        <img class="brand" src="../assets/actors-alchemy-logo-lockup.png" alt="Actors Alchemy">
+        <span class="count">05</span>
+      </div>
+      <div class="split">
+        <div class="content">
+          <p class="kicker">Workshop 03</p>
+          <h2 class="title title-medium">The Company Code</h2>
+          <p class="lede">Professional conduct for performers entering rehearsal rooms, contracts and companies.</p>
+          <p class="supporting">A no-nonsense look at the practical realities around etiquette, communication, pay, scams and self-promotion.</p>
+          <ul class="pill-row">
+            <li>company etiquette</li>
+            <li>chain of command</li>
+            <li>Equity rates</li>
+            <li>exposure pay</li>
+            <li>online scams</li>
+            <li>networking</li>
+          </ul>
+          <p class="duration">Proposed length: 1 hr</p>
+        </div>
+        <div class="number-mark">03</div>
+      </div>
+      <div class="footerline">
+        <span>Workshop offerings</span>
+        <span>05 / 09</span>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="06">
+      <div class="topline">
+        <img class="brand" src="../assets/actors-alchemy-logo-lockup.png" alt="Actors Alchemy">
+        <span class="count">06</span>
+      </div>
+      <div class="split">
+        <div class="content">
+          <p class="kicker">Workshop 04</p>
+          <h2 class="title title-medium">Self-Tape Synthesis</h2>
+          <p class="lede">A practical session on self-tapes as a key part of the audition process.</p>
+          <p class="supporting">Students work through setup, tripod recording, cold reading and tape technique, with recordings usable for Spotlight promotion at Fraser&rsquo;s and the practitioner&rsquo;s discretion.</p>
+          <ul class="pill-row">
+            <li>budget setup</li>
+            <li>lighting</li>
+            <li>sound</li>
+            <li>framing</li>
+            <li>reader work</li>
+            <li>truth on camera</li>
+          </ul>
+          <p class="duration">Proposed length: 2 hrs</p>
+        </div>
+        <div class="number-mark">04</div>
+      </div>
+      <div class="footerline">
+        <span>Workshop offerings</span>
+        <span>06 / 09</span>
+      </div>
+    </section>
+
+    <section class="slide slide-dark" data-slide="07">
+      <div class="topline">
+        <img class="brand" src="../assets/actors-alchemy-logo-lockup.png" alt="Actors Alchemy">
+        <span class="count">07</span>
+      </div>
+      <div class="split">
+        <div class="content">
+          <p class="kicker">Workshop 05</p>
+          <h2 class="title title-small">Ship Shape: Cruise 101</h2>
+          <p class="lede">A practical introduction to cruise auditions and life inside the contract.</p>
+          <p class="supporting">Tailored upon request for singers or dancers, covering the performance and organisational demands from auditions, visas and rehearsals through to life onboard.</p>
+          <ul class="pill-row">
+            <li>singers or dancers</li>
+            <li>audition structure</li>
+            <li>movement combinations</li>
+            <li>vocal expectations</li>
+            <li>visas</li>
+            <li>ship-life expectations</li>
+          </ul>
+          <p class="duration">Proposed length: 2 hrs</p>
+        </div>
+        <div class="number-mark">05</div>
+      </div>
+      <div class="footerline">
+        <span>Workshop offerings</span>
+        <span>07 / 09</span>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="08">
+      <div class="topline">
+        <img class="brand" src="../assets/actors-alchemy-logo-lockup.png" alt="Actors Alchemy">
+        <span class="count">08</span>
+      </div>
+      <div class="content">
+        <p class="kicker">Add-on or standalone</p>
+        <h2 class="title title-medium">The Q&amp;A</h2>
+        <p class="lede">An honest conversation connected to any workshop, giving students space to ask the industry questions they actually need answered.</p>
+        <ul class="pill-row">
+          <li>casting</li>
+          <li>agents</li>
+          <li>contracts</li>
+          <li>auditions</li>
+          <li>self-tapes</li>
+          <li>relationships</li>
+          <li>rejection</li>
+          <li>life after training</li>
+        </ul>
+        <p class="duration">Length: flexible</p>
+      </div>
+      <div class="footerline">
+        <span>Workshop offerings</span>
+        <span>08 / 09</span>
+      </div>
+    </section>
+
+    <section class="slide slide-dark" data-slide="09">
+      <div class="topline">
+        <img class="brand" src="../assets/actors-alchemy-logo-lockup.png" alt="Actors Alchemy">
+        <span class="count">09</span>
+      </div>
+      <div class="content">
+        <p class="kicker">Bring Actors Alchemy to your school</p>
+        <h2 class="title title-medium">Let&rsquo;s shape the right support for your students.</h2>
+        <div class="closing-card">
+          <p class="lede">Workshops can be booked individually, mixed and matched, combined with The Q&amp;A or expanded into weekly sessions.</p>
+          <p class="supporting">Each format can be scaled up or down depending on the course leader&rsquo;s needs.</p>
+        </div>
+        <ul class="pill-row">
+          <li>acting</li>
+          <li>musical theatre</li>
+          <li>screen acting</li>
+          <li>agents</li>
+          <li>auditions</li>
+          <li>professional rooms</li>
+        </ul>
+      </div>
+      <div class="footerline">
+        <span>fraser@actorsalchemy.co.uk</span>
+        <span>actorsalchemy.co.uk/workshops</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
