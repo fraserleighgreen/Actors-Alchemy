@@ -3561,14 +3561,17 @@ main > .section > .container {
   }
 
   .concession-popover {
-    right: auto;
-    left: 0;
-    width: min(31rem, calc(100vw - 1.35rem));
+    position: fixed;
+    right: 0.675rem;
+    bottom: calc(4.75rem + env(safe-area-inset-bottom));
+    left: 0.675rem;
+    width: auto;
+    max-height: calc(100dvh - 6.1rem - env(safe-area-inset-bottom));
+    overflow-y: auto;
   }
 
   .concession-popover::after {
-    right: auto;
-    left: 1.25rem;
+    display: none;
   }
 }
 
