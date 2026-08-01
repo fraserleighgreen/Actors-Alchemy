@@ -42,6 +42,7 @@
 
 html {
   overflow-x: hidden;
+  overscroll-behavior-y: none;
   scroll-behavior: smooth;
   background: var(--colour-warm-white);
   color: var(--colour-lead);
@@ -54,6 +55,7 @@ html {
 
 body {
   overflow-x: hidden;
+  overscroll-behavior-y: none;
   margin: 0;
   min-width: 320px;
   background:
@@ -3556,6 +3558,17 @@ main > .section > .container {
 
   .footer-links {
     justify-content: flex-start;
+  }
+
+  .concession-popover {
+    right: auto;
+    left: 0;
+    width: min(31rem, calc(100vw - 1.35rem));
+  }
+
+  .concession-popover::after {
+    right: auto;
+    left: 1.25rem;
   }
 }
 
