@@ -15,6 +15,9 @@ const coachingTopicButtons = Array.from(document.querySelectorAll(".coaching-top
 const coachingTopicModal = document.querySelector("#coaching-topic-modal");
 const coachingTopicTitle = document.querySelector("#coaching-topic-title");
 const coachingTopicDescription = document.querySelector("[data-topic-description]");
+const concessionOpenButton = document.querySelector("[data-concession-open]");
+const concessionPopover = document.querySelector("#concession-popover");
+const concessionPopoverWrap = document.querySelector("[data-concession-wrap]");
 const fraserFlipCards = Array.from(document.querySelectorAll(".fraser-flip-card"));
 const testimonialCarousel = document.querySelector("[data-testimonial-carousel]");
 const testimonialTrack = document.querySelector("[data-testimonial-track]");
@@ -435,6 +438,18 @@ function closeCoachingTopic({ restoreFocus = true } = {}) {
   if (restoreFocus) activeTopicButton?.focus();
 }
 
+function openConcessionPopover() {
+  if (!concessionPopover || !concessionOpenButton) return;
+  concessionPopover.hidden = false;
+  concessionOpenButton.setAttribute("aria-expanded", "true");
+}
+
+function closeConcessionPopover() {
+  if (!concessionPopover || !concessionOpenButton) return;
+  concessionPopover.hidden = true;
+  concessionOpenButton.setAttribute("aria-expanded", "false");
+}
+
 async function submitBookingRequest(event) {
   event.preventDefault();
 
@@ -522,6 +537,22 @@ document.querySelectorAll("[data-topic-close]").forEach((button) => {
   button.addEventListener("click", () => closeCoachingTopic({ restoreFocus: false }));
 });
 
+concessionOpenButton?.addEventListener("click", () => {
+  if (!concessionPopover) return;
+  if (concessionPopover.hidden) {
+    openConcessionPopover();
+  } else {
+    closeConcessionPopover();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!concessionPopover || concessionPopover.hidden || !concessionPopoverWrap) return;
+  const target = event.target;
+  if (target instanceof Node && concessionPopoverWrap.contains(target)) return;
+  closeConcessionPopover();
+});
+
 document.addEventListener("click", (event) => {
   if (!coachingTopicModal || coachingTopicModal.hidden) return;
   const target = event.target instanceof Element ? event.target : null;
@@ -539,6 +570,10 @@ document.addEventListener("keydown", (event) => {
 
   if (event.key === "Escape" && coachingTopicModal && !coachingTopicModal.hidden) {
     closeCoachingTopic();
+  }
+
+  if (event.key === "Escape" && concessionPopover && !concessionPopover.hidden) {
+    closeConcessionPopover();
   }
 });
 

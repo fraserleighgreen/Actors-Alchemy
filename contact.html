@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=concession-copy-spacing-1">
 </head>
 <body>
   <header class="site-header">
@@ -89,7 +89,16 @@
       </a>
       <div class="footer-contact">
         <div class="footer-links" aria-label="Contact links">
-          <a href="packages.html">Packages</a>
+          <div class="concession-popover-wrap" data-concession-wrap>
+            <button class="footer-link-button" type="button" aria-controls="concession-popover" aria-expanded="false" data-concession-open>Concession</button>
+            <aside class="concession-popover" id="concession-popover" aria-labelledby="concession-title" hidden>
+              <p class="eyebrow">Making coaching accessible</p>
+              <h2 id="concession-title">Pay what you can.</h2>
+              <p>Cost should not be the reason a performer is held back from growing in their passion and craft. Where capacity allows, Actors Alchemy offers pay-what-you-can sessions.</p>
+              <p>As a small independent business, we cannot guarantee support on every occasion. We will, however, consider every request with care.</p>
+              <p>Tell us a little about yourself, and we’ll do our best to help.</p>
+            </aside>
+          </div>
           <a href="mailto:fraser@actorsalchemy.co.uk">fraser@actorsalchemy.co.uk</a>
           <a class="social-link" href="https://www.instagram.com/actors.alchemy?igsh=MXBpcXM1bGhld2JzeA==" aria-label="Actors Alchemy on Instagram">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -104,6 +113,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=fast-load"></script>
+  <script src="script.js?v=concession-click-away-1"></script>
 </body>
 </html>
