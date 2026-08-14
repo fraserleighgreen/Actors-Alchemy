@@ -42,7 +42,7 @@
 
 html {
   overflow-x: hidden;
-  overscroll-behavior-y: none;
+  overscroll-behavior-y: auto;
   scroll-behavior: smooth;
   background: var(--colour-warm-white);
   color: var(--colour-lead);
@@ -55,7 +55,7 @@ html {
 
 body {
   overflow-x: hidden;
-  overscroll-behavior-y: none;
+  overscroll-behavior-y: auto;
   margin: 0;
   min-width: 320px;
   background:
@@ -3663,7 +3663,8 @@ main > .section > .container {
 
 /* Coaching packages */
 .packages-page main {
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .page-watermark {
@@ -3769,7 +3770,7 @@ main > .section > .container {
 .package-grid {
   display: grid;
   gap: var(--space-5);
-  align-items: start;
+  align-items: stretch;
 }
 
 .package-card {
@@ -3814,15 +3815,15 @@ main > .section > .container {
   font-size: 3rem;
 }
 
-#four-sessions {
+#three-sessions {
   --package-metal: #a85f39;
 }
 
-#eight-sessions {
+#five-sessions {
   --package-metal: #817d78;
 }
 
-#eight-sessions .package-count {
+#five-sessions .package-count {
   background: linear-gradient(105deg, #5f5b57 0%, #aaa6a0 30%, #f4efe7 48%, #b8b4ae 58%, #68645f 100%);
   background-clip: text;
   filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.65));
@@ -3830,7 +3831,7 @@ main > .section > .container {
   -webkit-text-fill-color: transparent;
 }
 
-#twelve-sessions {
+#ten-sessions {
   --package-metal: #b18432;
 }
 
@@ -3879,6 +3880,18 @@ main > .section > .container {
 .package-card > .button {
   width: 100%;
   margin-top: auto;
+}
+
+.button-ten-sessions {
+  border-color: var(--colour-alchemy-deep);
+  background: var(--colour-alchemy-deep);
+  color: var(--colour-warm-white);
+}
+
+.button-ten-sessions:hover {
+  border-color: var(--package-metal);
+  background: rgba(248, 243, 235, 0.72);
+  color: var(--colour-alchemy-deep);
 }
 
 .individual-session {
@@ -3941,6 +3954,10 @@ main > .section > .container {
   }
 
   .package-card-featured {
+    grid-column: auto;
+  }
+
+  #ten-sessions {
     grid-column: 1 / -1;
   }
 
@@ -3964,6 +3981,10 @@ main > .section > .container {
   .package-card-featured {
     grid-column: auto;
     transform: translateY(-0.75rem);
+  }
+
+  #ten-sessions {
+    grid-column: auto;
   }
 }
 
