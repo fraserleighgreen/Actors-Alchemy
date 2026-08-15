@@ -25,12 +25,13 @@ RUST_DEEP = HexColor("#7e4d2c")
 COPPER = HexColor("#a85f39")
 SILVER = HexColor("#88847e")
 GOLD = HexColor("#b18432")
+YOU_RED = HexColor("#ed0000")
 
 PACKAGES = [
-    {"sessions": "03", "title": "Three Sessions", "price": "£130", "saving": "Save £20", "number": COPPER},
-    {"sessions": "05", "title": "Five Sessions", "price": "£215", "saving": "Save £35", "number": SILVER},
-    {"sessions": "06", "title": "Six Sessions", "price": "£255", "saving": "Save £45", "number": RUST},
-    {"sessions": "10", "title": "Ten Sessions", "price": "£425", "saving": "Save £75", "number": GOLD},
+    {"sessions": "03", "title": "Three Sessions", "purpose": ["AN ACCESSIBLE PLACE TO BEGIN"], "price": "£130", "saving": "Save £20", "number": COPPER},
+    {"sessions": "05", "title": "Five Sessions", "purpose": ["SET GOALS. ACHIEVE. REPEAT."], "price": "£215", "saving": "Save £35", "number": SILVER},
+    {"sessions": "06", "title": "Six Sessions", "purpose": ["SET GOALS. ACHIEVE. REPEAT.", "PLUS ONE SESSION FREE"], "price": "£255", "saving": "Save £45", "number": RUST},
+    {"sessions": "10", "title": "Ten Sessions", "purpose": ["RETURNING CLIENTS.", "MAXIMUM AFFORDABILITY."], "price": "£425", "saving": "Save £75", "number": GOLD},
 ]
 
 
@@ -68,31 +69,51 @@ def draw_card(c, x, y, width, height, package):
     c.setLineWidth(1.15)
     c.roundRect(x, y, width, height, 2, fill=1, stroke=1)
 
-    c.setStrokeColor(package["number"])
+    c.setStrokeColor(YOU_RED if package["sessions"] == "06" else package["number"])
     c.setLineWidth(3.2)
     c.line(x + 1.8, y + height - 1.8, x + width - 1.8, y + height - 1.8)
+
+    content_center = x + width / 2
+    is_exclusive = package["sessions"] == "06"
+
+    if is_exclusive:
+        exclusive_x = x + 18
+        exclusive_y = y + height - 44
+        exclusive_width = 160
+        c.setFillColor(OAT)
+        c.roundRect(exclusive_x, exclusive_y, exclusive_width, 22, 2, fill=1, stroke=0)
+        c.setFillColor(YOU_RED)
+        c.setFont("Helvetica-Bold", 6.8)
+        c.drawCentredString(exclusive_x + exclusive_width / 2, y + height - 34, "EXCLUSIVE TO YOU MANAGEMENT CLIENTS")
 
     c.setFillColor(package["number"])
     c.setFont("Times-Roman", 24)
     c.drawRightString(x + width - 25, y + height - 39, package["sessions"])
 
-    content_center = x + width / 2
     c.setFillColor(CHARCOAL)
     c.setFont("Times-Roman", 29)
-    c.drawCentredString(content_center, y + height - 78, package["title"])
+    c.drawCentredString(content_center, y + height - 75, package["title"])
+
+    purpose_lines = package["purpose"]
+    purpose_size = 8.1 if len(purpose_lines) > 1 else 8.8
+    first_purpose_y = y + 116 if len(purpose_lines) == 1 else y + 119
+    c.setFillColor(RUST_DEEP)
+    c.setFont("Helvetica-Bold", purpose_size)
+    for index, line in enumerate(purpose_lines):
+        c.drawCentredString(content_center, first_purpose_y - index * 13, line)
 
     c.setStrokeColor(OAT_DEEP)
     c.setLineWidth(0.8)
-    c.line(x + 30, y + height - 98, x + width - 30, y + height - 98)
+    c.line(x + 30, y + 96, x + width - 30, y + 96)
 
     c.setFillColor(CHARCOAL)
-    c.setFont("Times-Roman", 36)
-    c.drawCentredString(content_center, y + height - 137, package["price"])
+    c.setFont("Times-Roman", 34)
+    c.drawCentredString(content_center, y + 58, package["price"])
 
     badge_width = 92
     badge_height = 28
     badge_x = content_center - badge_width / 2
-    badge_y = y + 26
+    badge_y = y + 15
     c.setFillColor(OAT)
     c.roundRect(badge_x, badge_y, badge_width, badge_height, 2, fill=1, stroke=0)
     c.setFillColor(RUST_DEEP)
@@ -123,20 +144,22 @@ def build_pdf():
     logo, logo_ratio = trimmed_logo(LOGO)
     you_logo, you_logo_ratio = trimmed_logo(YOU_LOGO)
     logo_height = 32
-    you_logo_height = logo_height * sqrt(logo_ratio / you_logo_ratio)
+    you_logo_height = logo_height * sqrt(logo_ratio / you_logo_ratio) * 0.55
     logo_width = logo_height * logo_ratio
     you_logo_width = you_logo_height * you_logo_ratio
     lockup_center_y = page_h - 68
     c.setFillColor(RUST)
     c.setFont("Times-Roman", 22)
-    cross_width = c.stringWidth("×", "Times-Roman", 22)
-    lockup_gap = 18
-    group_width = logo_width + lockup_gap + cross_width + lockup_gap + you_logo_width
-    group_x = (page_w - group_width) / 2
-    c.drawImage(logo, group_x, lockup_center_y - logo_height / 2, width=logo_width, height=logo_height, mask="auto")
-    cross_x = group_x + logo_width + lockup_gap
-    c.drawString(cross_x, lockup_center_y - 7, "×")
-    you_x = cross_x + cross_width + lockup_gap
+    cross_center_x = page_w / 2
+    lockup_clear_space = 35
+    logo_x = cross_center_x - lockup_clear_space - logo_width
+    title_text = "Development Packages"
+    title_start_x = (page_w - c.stringWidth(title_text, "Times-Roman", 36)) / 2
+    k_index = title_text.index("k")
+    packages_k_center_x = title_start_x + c.stringWidth(title_text[:k_index], "Times-Roman", 36) + c.stringWidth("k", "Times-Roman", 36) / 2
+    you_x = packages_k_center_x - you_logo_width / 2
+    c.drawImage(logo, logo_x, lockup_center_y - logo_height / 2, width=logo_width, height=logo_height, mask="auto")
+    c.drawCentredString(cross_center_x, lockup_center_y - 7, "×")
     c.drawImage(you_logo, you_x, lockup_center_y - you_logo_height / 2, width=you_logo_width, height=you_logo_height, mask="auto")
 
     c.setStrokeColor(OAT_DEEP)
@@ -147,7 +170,7 @@ def build_pdf():
 
     c.setFillColor(CHARCOAL)
     c.setFont("Times-Roman", 36)
-    c.drawCentredString(page_w / 2, page_h - 158, "Development Packages")
+    c.drawCentredString(page_w / 2, page_h - 158, title_text)
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 10.5)
     c.drawCentredString(page_w / 2, page_h - 181, "Personalised coaching shaped around your goals")
@@ -168,6 +191,18 @@ def build_pdf():
     ]
     for package, (x, y) in zip(PACKAGES, positions):
         draw_card(c, x, y, card_w, card_h, package)
+
+    note_x = 68
+    note_y = 66
+    note_width = page_w - 2 * note_x
+    note_height = 76
+    c.setFillColor(OAT)
+    c.roundRect(note_x, note_y, note_width, note_height, 3, fill=1, stroke=0)
+    c.setFillColor(MUTED)
+    c.setFont("Helvetica", 10.4)
+    c.drawCentredString(page_w / 2, 116, "All sessions are personalised and designed around each performer and their goals.")
+    c.drawCentredString(page_w / 2, 99, "These packages reflect the work we aim to achieve together,")
+    c.drawCentredString(page_w / 2, 82, "at an exclusive and affordable rate for YOU Management clients.")
 
     c.setStrokeColor(OAT_DEEP)
     c.setLineWidth(0.7)
