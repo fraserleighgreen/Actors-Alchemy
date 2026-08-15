@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actors Alchemy Package Carousel</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #28241f;
+      color: #f8f3eb;
+      font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      padding: 18px 22px;
+      border-bottom: 1px solid rgba(248, 243, 235, 0.14);
+      background: rgba(40, 36, 31, 0.96);
+    }
+    h1 { margin: 0; font-family: Georgia, serif; font-size: 22px; font-weight: 500; }
+    p { margin: 5px 0 0; color: rgba(248, 243, 235, 0.68); font-size: 13px; }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      padding: 20px;
+    }
+    a {
+      display: block;
+      overflow: hidden;
+      border: 1px solid rgba(214, 177, 106, 0.42);
+      background: #f8f3eb;
+      color: inherit;
+      text-decoration: none;
+      transition: border-color 180ms ease, transform 180ms ease;
+    }
+    a:hover, a:focus-visible { border-color: #d6b16a; transform: translateY(-2px); outline: none; }
+    img { display: block; width: 100%; height: auto; }
+    span {
+      display: block;
+      padding: 10px 12px;
+      background: #7e4d2c;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Package carousel</h1>
+    <p>Click any slide to open it full-size.</p>
+  </header>
+  <main>
+    <a href="actors-alchemy-packages-01.svg.png?v=20260815-12"><img src="actors-alchemy-packages-01.svg.png?v=20260815-12" alt="Carousel cover"><span>01 · Cover</span></a>
+    <a href="actors-alchemy-packages-02.svg.png?v=20260815-12"><img src="actors-alchemy-packages-02.svg.png?v=20260815-12" alt="Three sessions package"><span>02 · Three Sessions</span></a>
+    <a href="actors-alchemy-packages-03.svg.png?v=20260815-12"><img src="actors-alchemy-packages-03.svg.png?v=20260815-12" alt="Five sessions package"><span>03 · Five Sessions</span></a>
+    <a href="actors-alchemy-packages-04.svg.png?v=20260815-12"><img src="actors-alchemy-packages-04.svg.png?v=20260815-12" alt="Ten sessions package"><span>04 · Ten Sessions</span></a>
+  </main>
+</body>
+</html>

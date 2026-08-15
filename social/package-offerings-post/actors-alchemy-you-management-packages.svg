@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="3" seed="114"/>
+      <feColorMatrix values="0 0 0 0 0.16 0 0 0 0 0.13 0 0 0 0 0.10 0 0 0 0.028 0"/>
+    </filter>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5f5b57"/><stop offset="0.30" stop-color="#aaa6a0"/><stop offset="0.48" stop-color="#f4efe7"/><stop offset="0.62" stop-color="#b8b4ae"/><stop offset="1" stop-color="#68645f"/>
+    </linearGradient>
+    <style>
+      .heading { font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif; font-weight: 500; }
+      .body { font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      .eyebrow { font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3px; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#f8f3eb"/>
+  <rect width="1080" height="1080" fill="#efe6d7" opacity="0.14" filter="url(#paper)"/>
+  <image href="/Users/fraserleighgreen/Desktop/MISC2026/2026/Videos/General Videos/Fraser Leigh Green/Actors Alchemy/assets/actors-alchemy-logo-wordmark.png" x="350" y="55" width="380" height="82" preserveAspectRatio="xMidYMid meet"/>
+
+  <line x1="331" y1="180" x2="369" y2="180" stroke="#9d693d" stroke-width="1.5"/>
+  <text class="eyebrow" x="389" y="187" font-size="15" fill="#9d693d">EXCLUSIVE TO YOU MANAGEMENT</text>
+  <text class="heading" x="540" y="268" font-size="68" fill="#3c3832" text-anchor="middle">Development Packages</text>
+  <text class="body" x="540" y="307" font-size="16" fill="#75675b" text-anchor="middle">Based on the standard £50 session rate</text>
+
+  <g transform="translate(84 358)">
+    <rect width="438" height="280" fill="#f8f3eb" stroke="#d4c4af" stroke-width="1.5"/>
+    <text class="heading" x="82" y="120" font-size="105" fill="#a85f39" text-anchor="middle">03</text>
+    <text class="eyebrow" x="82" y="158" font-size="14" fill="#9d693d" text-anchor="middle">SESSIONS</text>
+    <line x1="165" y1="40" x2="165" y2="240" stroke="#d4c4af"/>
+    <text class="heading" x="298" y="112" font-size="52" fill="#3c3832" text-anchor="middle">£130</text>
+    <text class="body" x="298" y="153" font-size="15" fill="#75675b" text-anchor="middle">£43.33 per session</text>
+    <text class="body" x="298" y="203" font-size="15" fill="#7e4d2c" text-anchor="middle">Usual total £150</text>
+  </g>
+
+  <g transform="translate(558 358)">
+    <rect width="438" height="280" fill="#f8f3eb" stroke="#9d693d" stroke-width="2.5"/>
+    <text class="heading" x="82" y="120" font-size="105" fill="url(#silver)" text-anchor="middle">05</text>
+    <text class="eyebrow" x="82" y="158" font-size="14" fill="#9d693d" text-anchor="middle">SESSIONS</text>
+    <line x1="165" y1="40" x2="165" y2="240" stroke="#d4c4af"/>
+    <text class="heading" x="298" y="112" font-size="52" fill="#3c3832" text-anchor="middle">£215</text>
+    <text class="body" x="298" y="153" font-size="15" fill="#75675b" text-anchor="middle">£43 per session</text>
+    <text class="body" x="298" y="203" font-size="15" fill="#7e4d2c" text-anchor="middle">Usual total £250</text>
+  </g>
+
+  <g transform="translate(84 674)">
+    <rect width="438" height="280" fill="#f8f3eb" stroke="#9d693d" stroke-width="2.5"/>
+    <text class="heading" x="82" y="120" font-size="105" fill="#9d693d" text-anchor="middle">06</text>
+    <text class="eyebrow" x="82" y="158" font-size="14" fill="#9d693d" text-anchor="middle">SESSIONS</text>
+    <line x1="165" y1="40" x2="165" y2="240" stroke="#d4c4af"/>
+    <text class="heading" x="298" y="112" font-size="52" fill="#3c3832" text-anchor="middle">£255</text>
+    <text class="body" x="298" y="153" font-size="15" fill="#75675b" text-anchor="middle">£42.50 per session</text>
+    <text class="body" x="298" y="203" font-size="15" fill="#7e4d2c" text-anchor="middle">Usual total £300</text>
+  </g>
+
+  <g transform="translate(558 674)">
+    <rect width="438" height="280" fill="#f8f3eb" stroke="#d4c4af" stroke-width="1.5"/>
+    <text class="heading" x="82" y="120" font-size="105" fill="#b18432" text-anchor="middle">10</text>
+    <text class="eyebrow" x="82" y="158" font-size="14" fill="#9d693d" text-anchor="middle">SESSIONS</text>
+    <line x1="165" y1="40" x2="165" y2="240" stroke="#d4c4af"/>
+    <text class="heading" x="298" y="112" font-size="52" fill="#3c3832" text-anchor="middle">£425</text>
+    <text class="body" x="298" y="153" font-size="15" fill="#75675b" text-anchor="middle">£42.50 per session</text>
+    <text class="body" x="298" y="203" font-size="15" fill="#7e4d2c" text-anchor="middle">Usual total £500</text>
+  </g>
+</svg>

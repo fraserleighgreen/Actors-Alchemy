@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  
+  <defs>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="3" seed="114"/>
+      <feColorMatrix values="0 0 0 0 0.16 0 0 0 0 0.13 0 0 0 0 0.10 0 0 0 0.028 0"/>
+    </filter>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5f5b57"/><stop offset="0.30" stop-color="#aaa6a0"/><stop offset="0.48" stop-color="#f4efe7"/><stop offset="0.62" stop-color="#b8b4ae"/><stop offset="1" stop-color="#68645f"/>
+    </linearGradient>
+    <style>
+      .heading { font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif; font-weight: 500; }
+      .body { font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      .eyebrow { font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3px; }
+    </style>
+  </defs>
+  
+  <rect width="1080" height="1080" fill="#efe6d7"/>
+  <rect width="1080" height="1080" fill="#e8ddce" opacity="0.14" filter="url(#paper)"/>
+  <image href="/Users/fraserleighgreen/Desktop/MISC2026/2026/Videos/General Videos/Fraser Leigh Green/Actors Alchemy/assets/actors-alchemy-logo-wordmark.png" x="321.5" y="71.85" width="437" height="94.3" preserveAspectRatio="xMidYMid meet"/>
+  <image href="/Users/fraserleighgreen/Desktop/MISC2026/2026/Videos/General Videos/Fraser Leigh Green/Actors Alchemy/assets/actors-alchemy-icon.svg" x="710" y="650" width="320" height="340" opacity="0.11" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="411" y1="282" x2="449" y2="282" stroke="#9d693d" stroke-width="1.5"/>
+  <text class="eyebrow" x="469" y="289" font-size="20" fill="#9d693d">OUR PACKAGES</text>
+  <text class="heading" x="540" y="432" font-size="104" fill="#3c3832" text-anchor="middle">Development</text>
+  <text class="heading" x="540" y="535" font-size="104" fill="#3c3832" text-anchor="middle">Packages</text>
+  <text class="heading" x="540" y="625" font-size="38" font-style="italic" fill="#9d693d" text-anchor="middle">Personalised toward your goals.</text>
+  <text class="eyebrow" x="540" y="855" font-size="20" fill="#9d693d" text-anchor="middle">SWIPE TO VIEW PACKAGES  →</text>
+</svg>

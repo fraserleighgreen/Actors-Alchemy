@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  
+  <defs>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="3" seed="114"/>
+      <feColorMatrix values="0 0 0 0 0.16 0 0 0 0 0.13 0 0 0 0 0.10 0 0 0 0.028 0"/>
+    </filter>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5f5b57"/><stop offset="0.30" stop-color="#aaa6a0"/><stop offset="0.48" stop-color="#f4efe7"/><stop offset="0.62" stop-color="#b8b4ae"/><stop offset="1" stop-color="#68645f"/>
+    </linearGradient>
+    <style>
+      .heading { font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif; font-weight: 500; }
+      .body { font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      .eyebrow { font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3px; }
+    </style>
+  </defs>
+  
+  <rect width="1080" height="1080" fill="#efe6d7"/>
+  <rect width="1080" height="1080" fill="#e8ddce" opacity="0.14" filter="url(#paper)"/>
+  <image href="/Users/fraserleighgreen/Desktop/MISC2026/2026/Videos/General Videos/Fraser Leigh Green/Actors Alchemy/assets/actors-alchemy-logo-wordmark.png" x="72" y="43.1" width="345" height="74.75" preserveAspectRatio="xMinYMid meet"/>
+  <text class="body" x="1008" y="88" font-size="17" fill="#75675b" text-anchor="end">04 / 04</text>
+  <line x1="72" y1="168" x2="110" y2="168" stroke="#9d693d" stroke-width="1.5"/>
+  <text class="eyebrow" x="130" y="175" font-size="19" fill="#9d693d">DEVELOPMENT PACKAGE</text>
+
+  <rect x="112" y="235" width="856" height="620" fill="#efe6d7" fill-opacity="0.90" stroke="#d4c4af" stroke-width="1.5"/>
+  <line x1="176" y1="320" x2="214" y2="320" stroke="#9d693d" stroke-width="1.5"/>
+  <text class="eyebrow" x="234" y="327" font-size="20" fill="#9d693d">GOLD #10</text>
+  <text class="heading" x="890" y="360" font-size="62" fill="#b18432" text-anchor="end">10</text>
+  <text class="heading" x="176" y="445" font-size="72" fill="#3c3832">Ten Sessions</text>
+  <line x1="176" y1="490" x2="904" y2="490" stroke="#d4c4af"/>
+
+  <text class="heading" x="176" y="620" font-size="88" fill="#3c3832">£430</text>
+  <text class="body" x="176" y="676" font-size="32" font-weight="700" fill="#7e4d2c"><tspan x="176" dy="0">For clients committed to</tspan><tspan x="176" dy="42">continuous development.</tspan></text>
+  <rect x="176" y="749" width="170" height="52" fill="#e8ddce"/>
+  <text class="body" x="261" y="783" font-size="25" font-weight="700" fill="#7e4d2c" text-anchor="middle">Save £70</text>
+</svg>

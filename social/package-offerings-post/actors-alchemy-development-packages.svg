@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="3" seed="114"/>
+      <feColorMatrix values="0 0 0 0 0.16 0 0 0 0 0.13 0 0 0 0 0.10 0 0 0 0.028 0"/>
+    </filter>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5f5b57"/><stop offset="0.30" stop-color="#aaa6a0"/><stop offset="0.48" stop-color="#f4efe7"/><stop offset="0.62" stop-color="#b8b4ae"/><stop offset="1" stop-color="#68645f"/>
+    </linearGradient>
+    <style>
+      .heading { font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif; font-weight: 500; }
+      .body { font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      .eyebrow { font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3px; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#f8f3eb"/>
+  <rect width="1080" height="1080" fill="#efe6d7" opacity="0.14" filter="url(#paper)"/>
+  <image href="/Users/fraserleighgreen/Desktop/MISC2026/2026/Videos/General Videos/Fraser Leigh Green/Actors Alchemy/assets/actors-alchemy-logo-wordmark.png" x="350" y="70" width="380" height="82" preserveAspectRatio="xMidYMid meet"/>
+
+  <line x1="420" y1="207" x2="458" y2="207" stroke="#9d693d" stroke-width="1.5"/>
+  <text class="eyebrow" x="478" y="214" font-size="15" fill="#9d693d">OUR PACKAGES</text>
+  <text class="heading" x="540" y="302" font-size="72" fill="#3c3832" text-anchor="middle">Development Packages</text>
+
+  <g transform="translate(72 390)">
+    <rect width="288" height="410" fill="#f8f3eb" stroke="#d4c4af" stroke-width="1.5"/>
+    <text class="heading" x="144" y="126" font-size="112" fill="#a85f39" text-anchor="middle">03</text>
+    <text class="eyebrow" x="144" y="175" font-size="17" fill="#9d693d" text-anchor="middle">THREE SESSIONS</text>
+    <line x1="48" y1="211" x2="240" y2="211" stroke="#d4c4af"/>
+    <text class="heading" x="144" y="274" font-size="46" fill="#3c3832" text-anchor="middle">£145</text>
+    <text class="body" x="144" y="315" font-size="15" fill="#75675b" text-anchor="middle">£48.33 per session</text>
+    <text class="body" x="144" y="361" font-size="15" font-weight="700" fill="#7e4d2c" text-anchor="middle">Save £5</text>
+  </g>
+
+  <g transform="translate(396 390)">
+    <rect width="288" height="410" fill="#f8f3eb" stroke="#9d693d" stroke-width="2.5"/>
+    <text class="heading" x="144" y="126" font-size="112" fill="url(#silver)" text-anchor="middle">05</text>
+    <text class="eyebrow" x="144" y="175" font-size="17" fill="#9d693d" text-anchor="middle">FIVE SESSIONS</text>
+    <line x1="48" y1="211" x2="240" y2="211" stroke="#d4c4af"/>
+    <text class="heading" x="144" y="274" font-size="46" fill="#3c3832" text-anchor="middle">£225</text>
+    <text class="body" x="144" y="315" font-size="15" fill="#75675b" text-anchor="middle">£45 per session</text>
+    <text class="body" x="144" y="361" font-size="15" font-weight="700" fill="#7e4d2c" text-anchor="middle">Save £25</text>
+  </g>
+
+  <g transform="translate(720 390)">
+    <rect width="288" height="410" fill="#f8f3eb" stroke="#d4c4af" stroke-width="1.5"/>
+    <text class="heading" x="144" y="126" font-size="112" fill="#b18432" text-anchor="middle">10</text>
+    <text class="eyebrow" x="144" y="175" font-size="17" fill="#9d693d" text-anchor="middle">TEN SESSIONS</text>
+    <line x1="48" y1="211" x2="240" y2="211" stroke="#d4c4af"/>
+    <text class="heading" x="144" y="274" font-size="46" fill="#3c3832" text-anchor="middle">£430</text>
+    <text class="body" x="144" y="315" font-size="15" fill="#75675b" text-anchor="middle">£43 per session</text>
+    <text class="body" x="144" y="361" font-size="15" font-weight="700" fill="#7e4d2c" text-anchor="middle">Save £70</text>
+  </g>
+
+  <text class="heading" x="540" y="902" font-size="32" font-style="italic" fill="#3c3832" text-anchor="middle">Choose your support.</text>
+</svg>
