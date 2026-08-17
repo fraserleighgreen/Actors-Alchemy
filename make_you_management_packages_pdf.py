@@ -14,7 +14,7 @@ OUTPUT = ROOT / "output" / "pdf" / "Actors Alchemy - YOU Management Development 
 LOGO = ROOT / "assets" / "actors-alchemy-logo-wordmark.png"
 YOU_LOGO = ROOT / "assets" / "you-management-logo.png"
 
-PARCHMENT = HexColor("#efe6d7")
+PARCHMENT = HexColor("#f8f3eb")
 CARD = HexColor("#f4ecdf")
 OAT = HexColor("#e8ddce")
 OAT_DEEP = HexColor("#d4c4af")

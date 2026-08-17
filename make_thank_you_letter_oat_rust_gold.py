@@ -22,8 +22,8 @@ SIGNATURE = ROOT / "assets" / "fraser-signature-white.png"
 WATERMARK = SOURCE_ROOT / "actors-alchemy-graphite-watermark.png"
 
 PAGE_W, PAGE_H = A4
-PARCHMENT = colors.HexColor("#efe6d7")
-CARD = colors.HexColor("#f4ecdf")
+PARCHMENT = colors.HexColor("#f8f3eb")
+CARD = colors.HexColor("#f8f3eb")
 OAT = colors.HexColor("#e8ddce")
 OAT_DEEP = colors.HexColor("#d4c4af")
 CHARCOAL = colors.HexColor("#3c3832")
