@@ -3697,6 +3697,7 @@ main > .section > .container {
 }
 
 .packages-page .packages-hero > .container,
+.packages-page .coaching-options > .container,
 .packages-page .package-comparison > .container {
   position: relative;
   z-index: 1;
@@ -3751,12 +3752,22 @@ main > .section > .container {
   text-transform: uppercase;
 }
 
-#compare {
+#coaching,
+#packages {
   scroll-margin-top: 6rem;
 }
 
+.coaching-options,
 .package-comparison {
+  position: relative;
+}
+
+.coaching-options {
   background: rgba(239, 230, 215, 0.45);
+}
+
+.package-comparison {
+  background: rgba(248, 243, 235, 0.58);
 }
 
 .numbered-heading {
@@ -3765,6 +3776,170 @@ main > .section > .container {
 
 .numbered-heading h2 {
   max-width: 18ch;
+}
+
+.coaching-grid {
+  display: grid;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+.coaching-card {
+  --coaching-accent: var(--colour-copper);
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  padding: clamp(1.35rem, 3vw, 2.25rem);
+  border: 1px solid var(--colour-oat-deep);
+  background: rgba(248, 243, 235, 0.92);
+  box-shadow: var(--shadow-panel);
+}
+
+.coaching-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--coaching-accent);
+}
+
+#spotlight-surgery {
+  --coaching-accent: var(--colour-gold);
+}
+
+.coaching-card--standard {
+  --coaching-accent: var(--colour-alchemy);
+  border: 2px solid var(--colour-alchemy);
+  background: var(--colour-warm-white);
+}
+
+.coaching-card--priority {
+  --coaching-accent: var(--colour-alchemy-deep);
+}
+
+.coaching-card-head {
+  display: grid;
+  gap: var(--space-3);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--colour-oat-deep);
+}
+
+.coaching-card h3 {
+  margin-bottom: 0;
+  color: var(--colour-lead);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+.coaching-session-meta {
+  display: flex;
+  gap: var(--space-4);
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.coaching-session-meta span {
+  color: var(--colour-taupe);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.coaching-session-meta strong {
+  color: var(--colour-lead);
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.coaching-session-meta .coaching-complimentary {
+  color: var(--colour-alchemy-deep);
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 2.5vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.coaching-card-copy {
+  display: grid;
+  gap: var(--space-4);
+  padding-block: var(--space-5) var(--space-6);
+}
+
+.coaching-card-copy p {
+  margin-bottom: 0;
+  color: var(--colour-taupe);
+}
+
+.coaching-card-copy .coaching-card-question {
+  color: var(--colour-alchemy-deep);
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  line-height: 1.15;
+}
+
+.coaching-focus-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.coaching-focus-list li {
+  padding: 0.42rem 0.62rem;
+  border: 1px solid var(--colour-oat-deep);
+  background: var(--colour-oat);
+  color: var(--colour-alchemy-deep);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.coaching-card-copy .availability-note {
+  color: var(--colour-lead);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.coaching-card > .button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.coaching-guidance {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  border: 1px solid var(--colour-oat-deep);
+  background: var(--colour-warm-white);
+}
+
+.coaching-guidance p {
+  margin-bottom: 0;
+  color: var(--colour-taupe);
+}
+
+.coaching-guidance strong {
+  color: var(--colour-lead);
+}
+
+.coaching-guidance .text-link {
+  width: fit-content;
+  color: var(--colour-alchemy-deep);
+  font-weight: 700;
+}
+
+.packages-section-lede {
+  max-width: 46rem;
+  margin: var(--space-3) 0 0;
+  color: var(--colour-taupe);
 }
 
 .package-grid {
@@ -3941,7 +4116,7 @@ main > .section > .container {
 
 @media (min-width: 700px) {
   .packages-hero-grid {
-    grid-template-columns: 80px minmax(0, 1fr) minmax(230px, 0.42fr);
+    grid-template-columns: 80px minmax(0, 1fr);
     align-items: center;
   }
 
@@ -3951,6 +4126,15 @@ main > .section > .container {
 
   .package-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .coaching-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .coaching-guidance {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
   }
 
   .package-card-featured {
