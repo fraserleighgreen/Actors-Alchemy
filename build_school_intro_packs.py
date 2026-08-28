@@ -1,6 +1,7 @@
 from io import BytesIO
 import json
 from pathlib import Path
+import re
 
 from PIL import Image, ImageDraw, ImageFilter
 from pypdf import PdfReader, PdfWriter
@@ -27,7 +28,7 @@ BORDER = HexColor("#4C4132")
 MUTED = HexColor("#D5CBBE")
 TOTAL_PAGES = 4
 
-SCHOOLS = [
+EXISTING_SCHOOLS = [
     ("Guildford School of Acting", "Kevin Cripps and GSA", "gsa.png"),
     ("ArtsEd", "the ArtsEd Musical Theatre team", "artsed.png"),
     ("Mountview", "the Mountview performance team", "mountview-official.png"),
@@ -41,9 +42,27 @@ SCHOOLS = [
     ("Laine Theatre Arts", "the Laine Theatre Arts team", "laine-theatre-arts.png"),
 ]
 
+PROSPECT_SCHOOLS = [
+    ("Goldsmiths, University of London", "Bradley Rogers and Goldsmiths", "goldsmiths.png"),
+    ("University of West London - London College of Music", "the London College of Music Musical Theatre team", "uwl.png"),
+    ("Buckinghamshire New University", "Jo Roots and BNU", "bnu.png"),
+    ("University of Winchester", "Dr Adam Rush and Winchester", "winchester.png"),
+    ("University of Chichester Conservatoire", "Andrew Wright and Chichester", "chichester.png"),
+    ("Millennium Performing Arts", "Nigel West and Millennium Performing Arts", "mpa.png"),
+    ("Anglia Ruskin University", "Pippa Duffy and ARU", "aru.png"),
+    ("Urdang at City St George's", "Neil Kagan and Urdang", "urdang.png"),
+    ("Associated Studios", "Leontine Hass and Associated Studios", "associated-studios.png"),
+    ("LAMDA", "Gregory Haney and LAMDA", "lamda.png"),
+    ("Royal Academy of Music", "Dan Bowling and the Royal Academy of Music", "royal-academy-music.png"),
+]
+
+# Generate only the new prospect packs. The existing approved PDFs remain untouched.
+SCHOOLS = PROSPECT_SCHOOLS
+
 
 def slugify(text):
-    return "-".join(text.lower().replace("&", "and").split())
+    clean = re.sub(r"[^a-z0-9]+", "-", text.lower().replace("&", "and"))
+    return clean.strip("-")
 
 
 def fit_image(c, path, box, dark_background=True):
