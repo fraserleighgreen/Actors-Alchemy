@@ -2,6 +2,7 @@ from io import BytesIO
 import json
 from pathlib import Path
 import re
+import sys
 
 from PIL import Image, ImageDraw, ImageFilter
 from pypdf import PdfReader, PdfWriter
@@ -54,6 +55,10 @@ PROSPECT_SCHOOLS = [
     ("Associated Studios", "Leontine Hass and Associated Studios", "associated-studios.png"),
     ("LAMDA", "Gregory Haney and LAMDA", "lamda.png"),
     ("Royal Academy of Music", "Dan Bowling and the Royal Academy of Music", "royal-academy-music.png"),
+]
+
+NEW_COLLEGE_SCHOOLS = [
+    ("New College Swindon", "Alisa and New College Swindon", "new-college-swindon-white.png"),
 ]
 
 # Generate only the new prospect packs. The existing approved PDFs remain untouched.
@@ -253,7 +258,7 @@ def custom_page_base(c, page_width, page_height, number):
     draw_page_number(c, page_width, number)
 
 
-def cover_page(page_width, page_height, prepared_for, logo_name):
+def cover_page(page_width, page_height, prepared_for, logo_name, performing_arts_course=False):
     stream = BytesIO()
     c = canvas.Canvas(stream, pagesize=(page_width, page_height))
     custom_page_base(c, page_width, page_height, 1)
@@ -286,7 +291,12 @@ def cover_page(page_width, page_height, prepared_for, logo_name):
     )
     c.setFillColor(GOLD)
     c.setFont("Times-Italic", 16.2)
-    c.drawCentredString(page_width / 2, 714, "Bespoke workshops for drama schools and performers in training")
+    cover_subtitle = (
+        "Bespoke workshops for performing arts students"
+        if performing_arts_course
+        else "Bespoke workshops for drama schools and performers in training"
+    )
+    c.drawCentredString(page_width / 2, 714, cover_subtitle)
 
     c.setFillColor(PANEL)
     c.setStrokeColor(BORDER)
@@ -298,9 +308,14 @@ def cover_page(page_width, page_height, prepared_for, logo_name):
         "cover-copy", fontName="Times-Roman", fontSize=16.4, leading=23,
         textColor=PAPER, alignment=TA_CENTER,
     )
+    opening_line = (
+        "Actors Alchemy creates specifically curated, performer-led workshops for performing arts courses."
+        if performing_arts_course
+        else "Actors Alchemy creates specifically curated, performer-led workshops for drama schools."
+    )
     paragraph(
         c,
-        "Actors Alchemy creates specifically curated, performer-led workshops for drama schools. Each session is practical, supportive and shaped around where students are in their training - building confidence and helping them refine their audition process.<br/><br/>Although delivered in a workshop setting, the work remains personal - building from each performer's strengths and helping them strengthen their relationship to the work, to themselves and to the wider industry. Every workshop is designed to complement existing training while remaining adaptable, accessible and affordable.",
+        f"{opening_line} Each session is practical, supportive and shaped around where students are in their training - building confidence and helping them refine their audition process.<br/><br/>Although delivered in a workshop setting, the work remains personal - building from each performer's strengths and helping them strengthen their relationship to the work, to themselves and to the wider industry. Every workshop is designed to complement existing training while remaining adaptable, accessible and affordable.",
         80, 518, page_width - 160, cover_copy,
     )
     c.save()
@@ -308,7 +323,7 @@ def cover_page(page_width, page_height, prepared_for, logo_name):
     return PdfReader(stream).pages[0]
 
 
-def overview_page(page_width, page_height):
+def overview_page(page_width, page_height, performing_arts_course=False):
     stream = BytesIO()
     c = canvas.Canvas(stream, pagesize=(page_width, page_height))
     custom_page_base(c, page_width, page_height, 2)
@@ -325,7 +340,12 @@ def overview_page(page_width, page_height):
     c.drawCentredString(page_width / 2, 934, "OUR WORKSHOPS")
     c.setFillColor(GOLD)
     c.setFont("Times-Italic", 15.5)
-    c.drawCentredString(page_width / 2, 900, "Bespoke Workshops for Drama Schools and performers in training")
+    overview_subtitle = (
+        "Bespoke Workshops for Performing Arts Courses"
+        if performing_arts_course
+        else "Bespoke Workshops for Drama Schools and performers in training"
+    )
+    c.drawCentredString(page_width / 2, 900, overview_subtitle)
 
     c.setFillColor(PANEL)
     c.setStrokeColor(BORDER)
@@ -723,8 +743,9 @@ def build_pack(school, prepared_for, logo_name):
     writer = PdfWriter()
     width = float(reader.pages[0].mediabox.width)
     height = float(reader.pages[0].mediabox.height)
-    writer.add_page(cover_page(width, height, prepared_for, logo_name))
-    writer.add_page(overview_page(width, height))
+    performing_arts_course = school == "New College Swindon"
+    writer.add_page(cover_page(width, height, prepared_for, logo_name, performing_arts_course))
+    writer.add_page(overview_page(width, height, performing_arts_course))
     testimonials = [
         (
             ROOT / "assets/jamie-bailes.jpeg",
@@ -752,7 +773,11 @@ def build_pack(school, prepared_for, logo_name):
     writer.add_metadata({
         "/Title": f"Actors Alchemy - Introduction for {school}",
         "/Author": "Actors Alchemy",
-        "/Subject": "Drama school workshops for performers in training",
+        "/Subject": (
+            "Industry workshops for performing arts students"
+            if performing_arts_course
+            else "Drama school workshops for performers in training"
+        ),
     })
     path = OUT / f"actors-alchemy-intro-pack-{slugify(school)}.pdf"
     with path.open("wb") as fh:
@@ -843,9 +868,10 @@ def prepare_dark_logo_on_white(source, destination):
     padded.save(destination)
 
 
-def prepare_all_logos():
+def prepare_all_logos(schools=None):
     PROCESSED_LOGOS.mkdir(parents=True, exist_ok=True)
-    names = {item[2] for item in SCHOOLS if item[2]}
+    selected_schools = SCHOOLS if schools is None else schools
+    names = {item[2] for item in selected_schools if item[2]}
     for name in names:
         if name == "bird-college-vector.json":
             continue
@@ -886,8 +912,9 @@ def prepare_all_logos():
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    prepare_all_logos()
-    for item in SCHOOLS:
+    schools = NEW_COLLEGE_SCHOOLS if "--new-college" in sys.argv else SCHOOLS
+    prepare_all_logos(schools)
+    for item in schools:
         print(build_pack(*item))
 
 
