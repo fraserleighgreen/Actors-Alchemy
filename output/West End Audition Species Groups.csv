@@ -1,0 +1,11 @@
+﻿Monster Teams
+"Original columns map left to right: Werewolves, Zombies, Vampires"
+
+COLOUR,WEREWOLVES,,ZOMBIES,,VAMPIRES,
+COLOUR,Group 1 (6),Group 2 (6),Group 1 (6),Group 2 (6),Group 1 (6),Group 2 (6)
+RED,"Mia, Tiarna",Bethan,"Alyssa, Angel","Rufus, Soraya",Alannah,"Cerys, Georgia"
+BLUE,"Harri (i), Harry (y)","Lizzie, Preston","Charlotte, Harleigh","Izzy, Susie","Hetti, Joy","Layla, Sienna"
+GREEN,"Esme, Phlyn","Anastasia, Arlo, Eloise","Florence, Harper","Leah, Sascha","Coast, Eleanor, Yannis","Isaac, Herlin"
+
+HUMANS,April; Danielle; Jenny; Poppy; Phoebe; Suri,SKELETON,Sophie
+Count note,"Each species column has 12 names, split into two groups of six. Crossed-out Green Column 1 entry unreadable and excluded. Werewolf/Vampire colour totals uneven; groups balanced as closely as possible."
