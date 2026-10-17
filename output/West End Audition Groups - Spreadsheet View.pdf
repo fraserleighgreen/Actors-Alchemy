@@ -2,22 +2,14 @@
 %‚„œ”
 1 0 obj
 <<
-/Producer (ReportLab PDF Library \055 \050opensource\051)
-/Author (\050anonymous\051)
-/CreationDate (D\07220261008163832\05301\04700\047)
-/Creator (\050unspecified\051)
-/Keywords ()
-/ModDate (D\07220261008163832\05301\04700\047)
-/Subject (\050unspecified\051)
-/Title (West End Audition Groups \055 Spreadsheet View)
-/Trapped (\057False)
+/Producer (pypdf)
 >>
 endobj
 2 0 obj
 <<
 /Type /Pages
 /Count 4
-/Kids [ 4 0 R 9 0 R 14 0 R 21 0 R ]
+/Kids [ 4 0 R 10 0 R 17 0 R 24 0 R ]
 >>
 endobj
 3 0 obj
@@ -31,29 +23,282 @@ endobj
 /Contents 5 0 R
 /MediaBox [ 0 0 841.8898 595.2756 ]
 /Resources <<
-/Font 6 0 R
-/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F1-1 8 0 R
+/F2 9 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
 /Rotate 0
 /Trans <<
 >>
 /Type /Page
+/Annots [ ]
 /Parent 2 0 R
 >>
 endobj
 5 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ]
-/Length 1162
+/Length 4346
 >>
 stream
-Gau0CgMYb*&:O:SbbJC8/;JF43f0$2n0Y-:Cf-iY6E8ZfA9h6sY]-fg^SIq=AOK9OE,8V\WSsAb1PZZu5j]Aglhqa[/:u37#fn-7!#.gd1kRJ#rB2>STGT(";BT`Oca[M:JGI`OB_Z5)!uHWbe.SQT,[^Yi)@Y07B[Ls6YS[si"@iKG/"rq:`N'L`b>F8&*P?+6D(jI.>7_4!&PQB&CD_O3(D2>P(GND3Qq#PoCUfhjgtaR_rWQEZcGRcCi_(+XnE2Y+rW/bN&:HZ3XGsSc`.$RtGaSPX"27naRLt-0o+afp;9C@J&7C\[!EMc+Op2*rm\`dLSjM&Xa0m2/;>>O\!0*1p0rG3hdL&S%rTMl&`#HjkqXN)EH5$IUW8b88JnSS-Jq9ZMf_P_.dD0(fE!15DMJKR61CCKs6tsp('1[WY&W-]452,PH=Eh.48ECh-a'2h!=h=-ZgmUQu2F0.'p0+[Z9V$\g7C5O4/AYXj&ibpr&@4<6SY1r`9L(+V3^Y*n('JE>6R/6*0!2ucNrN*a7T`UGJF$>Vmeo=5^R<p5c$Q>Z94iUp25TI-^m0$Pm-Z*>Wef"q]GE=B7$^L[l2:?PaF"QPesG'diTtk?aE`%#MW.O@k&!rlWMRenUiYt*&Vdj4pak+$ik3-N^uIZ-\8+KH>ibFuF_:_$np+,<&b-'/PAF<d*g9109X:f]IscJl]B3R$`4KHLSP)^/hB\$N4C3.ucBD`#n[_=N`A/G\VLVf;m^B2qRHSI1(V]5[e='bQH]!E'M2NR3TB#S,LMm*oF([RYIci81H:jC(I9RuYG*B]-ZI>"$?c>IBfkuupjX`ui?;7=n:HQm;O(D&bW70Thi+0Go4!%`f*iW;TbIkg"8<`tmZ;hHLqrEurT5_7J_s<Y+-X$*njj0kLm!8(P.km%-D-Zq,f#3l]CPCFg/\V"8jkBIc.bhYRH&<7u_#',A]Z`9&P2H"npK(7;2,4".AJ(:'X&nY,VcWY@@hn_19]CH[nbch)^sq-1VI^b)HdbTE/:C:QYP._fkhC`hhB'=NiOV+;[=-SPK<_Tf19dZ:PffQulsmReh74fj[7Tp]..8eUFjn6A0CDrbp.X`T[=(bGHcYi2g:eIXW7OiLf/*uq32Lu>\tHKO&0r.]^#FXt7PEt0onCeC?/Z%0~>
+q
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.690196 .541176 .235294 RG
+.7 w
+n 34.01575 566.9291 m 807.874 566.9291 l S
+.384314 .364706 .333333 rg
+BT /F1 7 Tf 8.4 TL ET
+BT 1 0 0 1 34.01575 19.84252 Tm (WEST END AUDITION GROUPS  |  SPREADSHEET VIEW) Tj T* ET
+BT 1 0 0 1 785.691 19.84252 Tm (Page 1) Tj T* ET
+Q
+q
+1 0 0 1 40.01575 541.0866 cm
+Q
+q
+1 0 0 1 40.01575 519.0866 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 4 Tm /F2 18 Tf 22 TL 245.9201 0 Td (WEST END AUDITION GROUPS) Tj T* -245.9201 0 Td ET
+Q
+Q
+q
+1 0 0 1 49.6063 144.748 cm
+q
+.960784 .945098 .909804 rg
+n 0 371.3386 742.6772 -31.1811 re f*
+.988235 .909804 .901961 rg
+n 0 340.1575 742.6772 -113.3858 re f*
+.909804 .941176 .984314 rg
+n 0 226.7717 742.6772 -113.3858 re f*
+.917647 .952941 .890196 rg
+n 0 113.3858 742.6772 -113.3858 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 355.9386 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F2 9.2 Tf 11.4 TL (COLOUR) Tj T* ET
+Q
+Q
+q
+1 0 0 1 85.37008 355.9386 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F2 9.2 Tf 11.4 TL (GROUP 1) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.4724 355.9386 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F2 9.2 Tf 11.4 TL (GROUP 2) Tj T* ET
+Q
+Q
+q
+1 0 0 1 527.5748 355.9386 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F2 9.2 Tf 11.4 TL (GROUP 3) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 324.7575 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F2 9.2 Tf 11.4 TL (RED) Tj T* ET
+Q
+Q
+q
+1 0 0 1 85.37008 301.9575 cm
+q
+BT 1 0 0 1 0 25 Tm 11.4 TL /F1 9.2 Tf .145098 .133333 .117647 rg (Bethan) Tj  T* (Mia) Tj  T* (Tiarna) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.4724 290.5575 cm
+q
+BT 1 0 0 1 0 36.4 Tm 11.4 TL /F1 9.2 Tf .145098 .133333 .117647 rg (Alyssa) Tj  T* (Angel) Tj  T* (Rufus) Tj  T* (Soraya) Tj T* ET
+Q
+Q
+q
+1 0 0 1 527.5748 301.9575 cm
+q
+BT 1 0 0 1 0 25 Tm 11.4 TL /F1 9.2 Tf .145098 .133333 .117647 rg (Alannah) Tj  T* (Cerys) Tj  T* (Georgia) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 211.3717 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F2 9.2 Tf 11.4 TL (BLUE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 85.37008 177.1717 cm
+q
+BT 1 0 0 1 0 36.4 Tm 11.4 TL /F1 9.2 Tf .145098 .133333 .117647 rg (Harri \(i\)) Tj  T* (Harry \(y\)) Tj  T* (Lizzie) Tj  T* (Preston) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.4724 177.1717 cm
+q
+BT 1 0 0 1 0 36.4 Tm 11.4 TL /F1 9.2 Tf .145098 .133333 .117647 rg (Charlotte) Tj  T* (Harleigh) Tj  T* (Izzy) Tj  T* (Susie) Tj T* ET
+Q
+Q
+q
+1 0 0 1 527.5748 177.1717 cm
+q
+BT 1 0 0 1 0 36.4 Tm 11.4 TL /F1 9.2 Tf .145098 .133333 .117647 rg (Hetti) Tj  T* (Joy) Tj  T* (Layla) Tj  T* (Sienna) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 97.98583 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F2 9.2 Tf 11.4 TL (GREEN) Tj T* ET
+Q
+Q
+q
+1 0 0 1 85.37008 52.38583 cm
+q
+BT 1 0 0 1 0 47.8 Tm 11.4 TL /F1 9.2 Tf .145098 .133333 .117647 rg (Anastasia) Tj  T* (Arlo) Tj  T* (Eloise) Tj  T* (Esme) Tj  T* (Phlyn) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.4724 63.78583 cm
+q
+BT 1 0 0 1 0 36.4 Tm 11.4 TL /F1 9.2 Tf .145098 .133333 .117647 rg (Florence) Tj  T* (Harper) Tj  T* (Leah) Tj  T* (Sascha) Tj T* ET
+Q
+Q
+q
+1 0 0 1 527.5748 52.38583 cm
+q
+BT 1 0 0 1 0 47.8 Tm 11.4 TL /F1 9.2 Tf .145098 .133333 .117647 rg (Coast) Tj  T* (Eleanor) Tj  T* (Yannis) Tj  T* (Isaac) Tj  T* (Herlin) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.690196 .541176 .235294 RG
+.8 w
+n 0 340.1575 m 742.6772 340.1575 l S
+.847059 .815686 .752941 RG
+.4 w
+n 0 340.1575 m 742.6772 340.1575 l S
+n 0 0 m 742.6772 0 l S
+n 0 0 m 0 340.1575 l S
+n 742.6772 0 m 742.6772 340.1575 l S
+n 0 226.7717 m 742.6772 226.7717 l S
+n 0 113.3858 m 742.6772 113.3858 l S
+n 79.37008 0 m 79.37008 340.1575 l S
+n 300.4724 0 m 300.4724 340.1575 l S
+n 521.5748 0 m 521.5748 340.1575 l S
+Q
+Q
+Q
+ 
+
+Q
+
+q
+0.0 0.0 841.8898 595.2756 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.988235 0.909804 0.901961 rg
+n
+350 431.2756 55 53 re
+f*
+0.917647 0.952941 0.890196 rg
+n
+570 193.2756 58 65 re
+f*
+0 0 0 rg
+BT
+/F1-0 10 Tf
+12 TL
+ET
+BT
+1 0 0 1 356.1 470.9756 Tm
+(Alyssa) Tj
+T*
+ET
+BT
+1 0 0 1 356.1 459.5756 Tm
+(Rufus) Tj
+T*
+ET
+BT
+1 0 0 1 356.1 448.1756 Tm
+(Soraya) Tj
+T*
+ET
+BT
+1 0 0 1 577.2 244.2756 Tm
+(Coast) Tj
+T*
+ET
+BT
+1 0 0 1 577.2 232.8756 Tm
+(Eleanor) Tj
+T*
+ET
+BT
+1 0 0 1 577.2 221.4756 Tm
+(Isaac) Tj
+T*
+ET
+BT
+1 0 0 1 577.2 210.0756 Tm
+(Herlin) Tj
+T*
+ET
+Q
+
+
+Q
+
+q
+0.0 0.0 841.8898 595.2756 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-1 12 Tf
+14.4 TL
+ET
+0.847059 0.815686 0.752941 RG
+0.4 w
+n
+350.1 431.2756 m
+350.1 484.8756 l
+S
+n
+571.2 193.2756 m
+571.2 258.1756 l
+S
+Q
+
+
 endstream
 endobj
 6 0 obj
 <<
-/F1 7 0 R
-/F2 8 0 R
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 7 0 obj
@@ -67,6 +312,15 @@ endobj
 endobj
 8 0 obj
 <<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+9 0 obj
+<<
 /BaseFont /Helvetica-Bold
 /Encoding /WinAnsiEncoding
 /Name /F2
@@ -74,22 +328,27 @@ endobj
 /Type /Font
 >>
 endobj
-9 0 obj
+10 0 obj
 <<
-/Contents 10 0 R
+/Contents 11 0 R
 /MediaBox [ 0 0 841.8898 595.2756 ]
 /Resources <<
 /ExtGState <<
 /gRLs0 <<
 /ca 0.42
 >>
+/gRLs1 <<
+/ca 1
+>>
 >>
 /Font <<
-/F1 7 0 R
-/F1-0 11 0 R
-/F1-1 12 0 R
-/F1-2 13 0 R
-/F2 8 0 R
+/F1 6 0 R
+/F1-0 12 0 R
+/F1-1 13 0 R
+/F1-2 14 0 R
+/F1-3 15 0 R
+/F1-4 16 0 R
+/F2 9 0 R
 >>
 /ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
@@ -101,11 +360,13 @@ endobj
 /Parent 2 0 R
 >>
 endobj
-10 0 obj
+11 0 obj
 <<
-/Length 8599
+/Length 9933
 >>
 stream
+q
+q
 q
 q
 q
@@ -611,16 +872,141 @@ S
 Q
 
 
+Q
+
+q
+0.0 0.0 841.8898 595.2756 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-3 12 Tf
+14.4 TL
+ET
+0.988235 0.909804 0.901961 rg
+n
+632 384.2756 78 20 re
+f*
+n
+720 384.2756 75 20 re
+f*
+0.917647 0.952941 0.890196 rg
+n
+632 196.2756 78 31 re
+f*
+n
+720 196.2756 75 31 re
+f*
+0 0 0 rg
+n
+634.1913 387.6925 33.33 12 re
+f*
+0.88 0.12 0.12 rg
+/gRLs0 gs
+n
+670.5813 388.7925 38.37 11.6 re
+f*
+BT
+/F1-3 10 Tf
+12 TL
+ET
+1 1 1 rg
+/gRLs1 gs
+BT
+1 0 0 1 635.2913 389.9925 Tm
+(Alanah) Tj
+T*
+ET
+0 0 0 rg
+BT
+1 0 0 1 666.4213 389.9925 Tm
+(\054 Georgia) Tj
+T*
+ET
+BT
+1 0 0 1 723.1654 389.9925 Tm
+(Cerys) Tj
+T*
+ET
+BT
+1 0 0 1 635.2913 208.5756 Tm
+(Coast\054 Eleanor) Tj
+T*
+ET
+BT
+1 0 0 1 723.1654 214.2756 Tm
+(Isaac\054 Herlin\054) Tj
+T*
+ET
+BT
+1 0 0 1 723.1654 202.8756 Tm
+(Yannis) Tj
+T*
+ET
+Q
+
+
+Q
+
+q
+0.0 0.0 841.8898 595.2756 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-4 12 Tf
+14.4 TL
+ET
+0.988235 0.909804 0.901961 rg
+n
+458 384.2756 66 20 re
+f*
+0.917647 0.952941 0.890196 rg
+n
+720 196.2756 75 31 re
+f*
+0.956863 0.945098 0.909804 rg
+n
+502 449.9756 15 12 re
+f*
+n
+765.5 449.9756 15 12 re
+f*
+0 0 0 rg
+BT
+/F1-4 10 Tf
+12 TL
+ET
+0 0 0 rg
+n
+458.4433 387.6925 31.65 12 re
+f*
+1 1 1 rg
+BT
+1 0 0 1 459.5433 389.9925 Tm
+(Alyssa) Tj
+T*
+ET
+0 0 0 rg
+BT
+1 0 0 1 503.5 452.3756 Tm
+(\0505\051) Tj
+T*
+ET
+BT
+1 0 0 1 767.1 452.3756 Tm
+(\0505\051) Tj
+T*
+ET
+BT
+1 0 0 1 723.1654 208.5756 Tm
+(Isaac\054 Herlin) Tj
+T*
+ET
+Q
+
+
 endstream
-endobj
-11 0 obj
-<<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
->>
 endobj
 12 0 obj
 <<
@@ -642,7 +1028,34 @@ endobj
 endobj
 14 0 obj
 <<
-/Contents 15 0 R
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+15 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+16 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+17 0 obj
+<<
+/Contents 18 0 R
 /MediaBox [ 0 0 841.8898 595.2756 ]
 /Resources <<
 /ExtGState <<
@@ -651,13 +1064,13 @@ endobj
 >>
 >>
 /Font <<
-/F1 7 0 R
-/F1-0 16 0 R
-/F1-1 17 0 R
-/F1-2 18 0 R
-/F1-3 19 0 R
-/F2 8 0 R
-/F2-0 20 0 R
+/F1 6 0 R
+/F1-0 19 0 R
+/F1-1 20 0 R
+/F1-2 21 0 R
+/F1-3 22 0 R
+/F2 9 0 R
+/F2-0 23 0 R
 >>
 /ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
@@ -669,7 +1082,7 @@ endobj
 /Parent 2 0 R
 >>
 endobj
-15 0 obj
+18 0 obj
 <<
 /Length 13701
 >>
@@ -1500,33 +1913,6 @@ Q
 
 endstream
 endobj
-16 0 obj
-<<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
->>
-endobj
-17 0 obj
-<<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
->>
-endobj
-18 0 obj
-<<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
->>
-endobj
 19 0 obj
 <<
 /BaseFont /Helvetica
@@ -1538,6 +1924,33 @@ endobj
 endobj
 20 0 obj
 <<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+21 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+22 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+23 0 obj
+<<
 /BaseFont /Helvetica-Bold
 /Encoding /WinAnsiEncoding
 /Name /F2
@@ -1545,61 +1958,900 @@ endobj
 /Type /Font
 >>
 endobj
-21 0 obj
+24 0 obj
 <<
-/Contents 22 0 R
+/Contents 25 0 R
 /MediaBox [ 0 0 841.8898 595.2756 ]
 /Resources <<
-/Font 6 0 R
-/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+/Font <<
+/F1 6 0 R
+/F1-0 26 0 R
+/F1-1 27 0 R
+/F1-2 28 0 R
+/F2 9 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
 /Rotate 0
 /Trans <<
 >>
 /Type /Page
+/Annots [ ]
 /Parent 2 0 R
 >>
 endobj
-22 0 obj
+25 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ]
-/Length 1877
+/Length 13288
 >>
 stream
-Gau`V?$"IS'Re<2csrC[KI#l)hZ?Mcf[,p2D.f8bEJpNA`9oZ?%*\_G^&F1s%'eWV]<cT-puGWAlC9A-El89:+("r\h\#F"9jZ%(iI\-q&h^./lQqt$-\"pjG)SLWW03YipfBjU3(^8Z:T,Go-RjltAR$*APh+=ja2s?DAuISmKskMLTokTPQ\7h3)?ro)jWBY8Rah84TXUL5:gPO78[tNr$3c:SaN<gc[3i6O;_l$M?*"hYkN)<d`V&>MOFIO=?!bdQVlR/WCe\d_ZeOBYqD28=4)!8K"^U1t]9i&cKZMFJmm)`l%`t1=ap:&K,>dl#JD`TkPiP^sB*m["[qVP61j/Q'G=32q]U0)DD'=ZGKc1P%<!liW^A^Amk)8iqP.[5MpQpfg]#jSi(fht)A7d:"(34A_.cnHu.PmujZ!`Nk1N`,UaWe'u84X#j%.Z)M;8j]\kG%e`-[A$B5(a'>Y#&3L"t.o$78l,V!M*6;@,$3u]5GDN74:[)0g\H5AE&timcT^d(8:M`hTs=S[Y;Y&=ieIHEMJ$gG9i04I\J9]7ZB![<hk=F<A]2G5(,L#8u8SuMi)KS>sYC%\l^#O<Q7qu^s`79QHV"baF(7?H^%m$aE"9i$nNshf2o<3Gor^qe?[.YNDNGK&TU[gX81phR`>6.nU;,^Ru>S*\kgb-Lu6<*h']hHD*jhX>F<ni>_Vrl'qjaa.SmeQGlcsT3;l8:qn1"Zfa&P$BsDNjc>Uc.@B$M4i:1A4,Y%QZc20"5DN=L21VsB=?/g;'UX'4%1b\pW#\Vm;::#>$("ga_<ab+"cEaVaOA28>)$6k'@]:L_%EUO*ACqE7@cSsF4hlOs8f0ph8W@B$IeQp>p]r7ORB`<uc>Uc1c)=LnT^g:9=e;G`@g3)porkHAJ&I6=,HS]+Do`:<=;km*)W+\f5:.VH(?i]nM"fTjDNe[<%r,d2r7G-]aY,L?0tc'-=d!\^km7*iM3/n2kkY1^amXNte'(Z&7<f4&`BK=N7i6g%MerTGI^!-&B6!dA`sqG>28qWn/CnAF57F$4:5f$l5gO@VHK#-POkekHR4fYj5=Wjlke,P3@->"PiR#2pi!T1?bTSV$j8HlOf1l%QaA/Dk\*9HM,jZZla'1"m)5l_25JdYA@cYQ4H@A4;PCS@Ucqj;IkFM(pp"Sa,WfN96C)+dYH`)r#AimkTCgQT.lH>6kiG^foBC'F=I("c5M7NODNRLV-h2^,;U/QEtkBWSHfd'knCM;?#oW/6*0T=^V8\@RLRj:^h(ReDIS_'olZaoNS&!t26ULuBU\cNb&;0^RSAbPmY6?RD,G-^oJ[Kk:+\%Xomb+iT+oL4M3Q91)8n[s7jP.M=T%6Cb\r\XGB"O`XPR'6(B1E(S:45_X'ksnYpH[P%F;`i_tCgo'r)tGaWPFmF&2)]'YLRcuCgSj\4gBd?2kdPpqiY;_[Xd:+f3J$gA4lV_3G!8E,Ifk0bpRZ]:jf,0'WKph:0#_>^H)Ke$MrdQ8BZ*lJ@u<`"<O^ruf5t3d=OB`EG,Fj[$Xe,ph21H5E\RAGa;E'eEC!ERq&g\3'pnnE.B%<>#G3rB%habO_bgup?p9BLlG2C%W54oFiAbu6Wc!p=I#sK0GpaU824+nPVDub0K:iG?6'>(mAY>((Hk>Y$MR)Whe;t2LrnL`t_`A%catllF<G0E75p#V`#.3JhTT[?CO909e$<6S`%r.,0Fb:UV#JjXN2[,%bbQfjgR5@3\H`ROZMH6La'BHDF86Z(=OEUda+c92FT[(/(*c%g^5+`WjAW=)q(0,6H-tSB<6.XP,APrL,i]r#0D\_rt_,tIBG&Vco?j&!a[@A'AEdr'ohVp,t`t$0p]I!;S5Yh"P3-W%dJ&p\XQ-ChJ~>
+q
+q
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.690196 .541176 .235294 RG
+.7 w
+n 34.01575 566.9291 m 807.874 566.9291 l S
+.384314 .364706 .333333 rg
+BT /F1 7 Tf 8.4 TL ET
+BT 1 0 0 1 34.01575 19.84252 Tm (WEST END AUDITION GROUPS  |  SPREADSHEET VIEW) Tj T* ET
+BT 1 0 0 1 785.691 19.84252 Tm (Page 4) Tj T* ET
+Q
+q
+1 0 0 1 40.01575 543.9213 cm
+Q
+q
+1 0 0 1 40.01575 521.9213 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 4 Tm /F2 18 Tf 22 TL 305.4281 0 Td (FINAL CAST LIST) Tj T* -305.4281 0 Td ET
+Q
+Q
+q
+1 0 0 1 48.18898 96.55906 cm
+q
+.960784 .945098 .909804 rg
+n 0 422.3622 745.5118 -25.51181 re f*
+.917647 .952941 .890196 rg
+n 0 396.8504 745.5118 -19.84252 re f*
+.847059 .772549 .94902 rg
+n 0 138.8976 745.5118 -19.84252 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 404.3563 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9.2 Tf 10.5 TL (NAME) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 404.3563 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9.2 Tf 10.5 TL (ROLE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 404.3563 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9.2 Tf 10.5 TL (ROLE FOR FILM) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 381.6791 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9.2 Tf 10.5 TL (GREEN) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 362.8039 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Anastasia) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 362.8039 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - W | Scene 5: Ensemble - W) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 362.8039 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 345.7961 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Arlo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 345.7961 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - W | Scene 5: Ensemble - W) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 345.7961 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 328.7882 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Coast) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 328.7882 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - V | Scene 5: Ensemble - V) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 328.7882 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Casey) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 311.7803 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Eleanor) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 311.7803 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - V | Scene 5: Ensemble - V) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 311.7803 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Tooth Scary) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 294.7724 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Eloise) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 294.7724 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - W | Scene 5: Ensemble - W) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 294.7724 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 277.7646 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Esm\351) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 277.7646 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - W | Scene 5: Ensemble - W) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 277.7646 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 260.7567 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Florence) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 260.7567 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - Z | Scene 5: Ensemble - Z) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 260.7567 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 243.7488 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Harper) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 243.7488 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Zombino | Scene 5: Zombino) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 243.7488 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 226.7409 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Herlin) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 226.7409 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - V | Scene 5: Ensemble - V) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 226.7409 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Kirby) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 209.7331 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Isaac) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 209.7331 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - V | Scene 5: Ensemble - V) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 209.7331 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scary Hand) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 192.7252 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Leah) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 192.7252 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - Z | Scene 5: Ensemble - Z) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 192.7252 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 175.7173 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Phlyn) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 175.7173 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - Z | Scene 5: Ensemble - Z) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 175.7173 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Landry) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 158.7094 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Sasha) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 158.7094 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - Z | Scene 5: Ensemble - Z) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 158.7094 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Sid) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 141.7016 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Yannis) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 141.7016 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Ensemble - V | Scene 5: Ensemble - V) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 141.7016 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 123.7264 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9.2 Tf 10.5 TL (HUMANS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 104.8512 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (April) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 104.8512 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Sky | Scene 5: Sky) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 104.8512 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 87.84331 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Danielle) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 87.84331 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Frankie | Scene 5: Frankie) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 87.84331 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 70.83543 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Jenny) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 70.83543 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Vic | Scene 5: Vic) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 70.83543 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 53.82756 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Poppy) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 53.82756 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Sunny | Scene 5: Sunny) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 53.82756 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 36.81969 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Phoebe) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 36.81969 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Dewey | Scene 5: Dewey) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 36.81969 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 19.81181 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Sophie) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 19.81181 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: DJ Bonez | Scene 5: DJ Bonez) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 19.81181 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 2.803937 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Suri) Tj T* ET
+Q
+Q
+q
+1 0 0 1 93.87402 2.803937 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Scene 2: Dash | Scene 5: Dash) Tj T* ET
+Q
+Q
+q
+1 0 0 1 578.5984 2.803937 cm
+q
+.145098 .133333 .117647 rg
+BT 1 0 0 1 0 2.2 Tm /F1 9.2 Tf 11.4 TL (Crew) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.690196 .541176 .235294 RG
+.8 w
+n 0 396.8504 m 745.5118 396.8504 l S
+.847059 .815686 .752941 RG
+.35 w
+n 0 422.3622 m 745.5118 422.3622 l S
+n 0 0 m 745.5118 0 l S
+n 0 0 m 0 422.3622 l S
+n 745.5118 0 m 745.5118 422.3622 l S
+n 0 396.8504 m 745.5118 396.8504 l S
+n 0 377.0079 m 745.5118 377.0079 l S
+n 0 360 m 745.5118 360 l S
+n 0 342.9921 m 745.5118 342.9921 l S
+n 0 325.9843 m 745.5118 325.9843 l S
+n 0 308.9764 m 745.5118 308.9764 l S
+n 0 291.9685 m 745.5118 291.9685 l S
+n 0 274.9606 m 745.5118 274.9606 l S
+n 0 257.9528 m 745.5118 257.9528 l S
+n 0 240.9449 m 745.5118 240.9449 l S
+n 0 223.937 m 745.5118 223.937 l S
+n 0 206.9291 m 745.5118 206.9291 l S
+n 0 189.9213 m 745.5118 189.9213 l S
+n 0 172.9134 m 745.5118 172.9134 l S
+n 0 155.9055 m 745.5118 155.9055 l S
+n 0 138.8976 m 745.5118 138.8976 l S
+n 0 119.0551 m 745.5118 119.0551 l S
+n 0 102.0472 m 745.5118 102.0472 l S
+n 0 85.03937 m 745.5118 85.03937 l S
+n 0 68.0315 m 745.5118 68.0315 l S
+n 0 51.02362 m 745.5118 51.02362 l S
+n 0 34.01575 m 745.5118 34.01575 l S
+n 0 17.00787 m 745.5118 17.00787 l S
+n 87.87402 0 m 87.87402 119.0551 l S
+n 87.87402 138.8976 m 87.87402 377.0079 l S
+n 87.87402 396.8504 m 87.87402 422.3622 l S
+n 572.5984 0 m 572.5984 119.0551 l S
+n 572.5984 138.8976 m 572.5984 377.0079 l S
+n 572.5984 396.8504 m 572.5984 422.3622 l S
+.6 w
+n 0 422.3622 m 745.5118 422.3622 l S
+n 0 0 m 745.5118 0 l S
+n 0 0 m 0 422.3622 l S
+n 745.5118 0 m 745.5118 422.3622 l S
+Q
+Q
+Q
+ 
+
+Q
+
+q
+0.0 0.0 841.8898 595.2756 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+49 236.2756 744 14 re
+f*
+Q
+
+
+Q
+
+q
+0.0 0.0 841.8898 595.2756 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-1 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+48.2 96.5756 745.5 155.9 re
+f*
+0.847059 0.760784 0.929412 rg
+n
+48.2 232.5756 745.5 19.9 re
+f*
+0 0 0 rg
+BT
+/F1-1 10 Tf
+12 TL
+ET
+BT
+1 0 0 1 54.2 238.6756 Tm
+(HUMANS) Tj
+T*
+ET
+BT
+1 0 0 1 54.2 219.5756 Tm
+(April) Tj
+T*
+ET
+BT
+1 0 0 1 142.1 219.5756 Tm
+(Scene 2\072 Sky \174 Scene 5\072 Sky) Tj
+T*
+ET
+BT
+1 0 0 1 626.8 219.5756 Tm
+(Crew) Tj
+T*
+ET
+BT
+1 0 0 1 54.2 202.5756 Tm
+(Danielle) Tj
+T*
+ET
+BT
+1 0 0 1 142.1 202.5756 Tm
+(Scene 2\072 Frankie \174 Scene 5\072 Frankie) Tj
+T*
+ET
+BT
+1 0 0 1 626.8 202.5756 Tm
+(Crew) Tj
+T*
+ET
+BT
+1 0 0 1 54.2 185.5756 Tm
+(Jenny) Tj
+T*
+ET
+BT
+1 0 0 1 142.1 185.5756 Tm
+(Scene 2\072 Vic \174 Scene 5\072 Vic) Tj
+T*
+ET
+BT
+1 0 0 1 626.8 185.5756 Tm
+(Crew) Tj
+T*
+ET
+BT
+1 0 0 1 54.2 168.5756 Tm
+(Poppy) Tj
+T*
+ET
+BT
+1 0 0 1 142.1 168.5756 Tm
+(Scene 2\072 Sunny \174 Scene 5\072 Sunny) Tj
+T*
+ET
+BT
+1 0 0 1 626.8 168.5756 Tm
+(Crew) Tj
+T*
+ET
+BT
+1 0 0 1 54.2 151.5756 Tm
+(Phoebe) Tj
+T*
+ET
+BT
+1 0 0 1 142.1 151.5756 Tm
+(Scene 2\072 Dewey \174 Scene 5\072 Dewey) Tj
+T*
+ET
+BT
+1 0 0 1 626.8 151.5756 Tm
+(Crew) Tj
+T*
+ET
+BT
+1 0 0 1 54.2 134.5756 Tm
+(Sophie) Tj
+T*
+ET
+BT
+1 0 0 1 142.1 134.5756 Tm
+(Scene 2\072 DJ Bonez \174 Scene 5\072 DJ Bonez) Tj
+T*
+ET
+BT
+1 0 0 1 626.8 134.5756 Tm
+(Crew) Tj
+T*
+ET
+BT
+1 0 0 1 54.2 117.5756 Tm
+(Suri) Tj
+T*
+ET
+BT
+1 0 0 1 142.1 117.5756 Tm
+(Scene 2\072 Dash \174 Scene 5\072 Dash) Tj
+T*
+ET
+BT
+1 0 0 1 626.8 117.5756 Tm
+(Crew) Tj
+T*
+ET
+0.847059 0.815686 0.752941 RG
+0.35 w
+n
+48.2 252.4756 m
+793.7 252.4756 l
+S
+n
+48.2 232.5756 m
+793.7 232.5756 l
+S
+n
+48.2 215.5756 m
+793.7 215.5756 l
+S
+n
+48.2 198.5756 m
+793.7 198.5756 l
+S
+n
+48.2 181.5756 m
+793.7 181.5756 l
+S
+n
+48.2 164.5756 m
+793.7 164.5756 l
+S
+n
+48.2 147.5756 m
+793.7 147.5756 l
+S
+n
+48.2 130.5756 m
+793.7 130.5756 l
+S
+n
+48.2 113.5756 m
+793.7 113.5756 l
+S
+n
+48.2 252.4756 m
+48.2 113.5756 l
+S
+n
+136.1 252.4756 m
+136.1 113.5756 l
+S
+n
+620.8 252.4756 m
+620.8 113.5756 l
+S
+n
+793.7 252.4756 m
+793.7 113.5756 l
+S
+0.6 w
+n
+48.2 252.4756 m
+48.2 113.5756 l
+S
+n
+793.7 252.4756 m
+793.7 113.5756 l
+S
+n
+48.2 113.5756 m
+793.7 113.5756 l
+S
+Q
+
+
+Q
+
+q
+0.0 0.0 841.89 595.28 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-2 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+47 93.28 748 19 re
+f*
+Q
+
+
 endstream
 endobj
+26 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+27 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+28 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
 xref
-0 23
+0 29
 0000000000 65535 f 
 0000000015 00000 n 
-0000000373 00000 n 
-0000000452 00000 n 
-0000000501 00000 n 
-0000000700 00000 n 
-0000001954 00000 n 
-0000001995 00000 n 
-0000002102 00000 n 
-0000002214 00000 n 
-0000002524 00000 n 
-0000011176 00000 n 
-0000011284 00000 n 
-0000011392 00000 n 
-0000011500 00000 n 
-0000011837 00000 n 
-0000025592 00000 n 
-0000025700 00000 n 
-0000025808 00000 n 
-0000025916 00000 n 
-0000026024 00000 n 
-0000026137 00000 n 
-0000026338 00000 n 
+0000000054 00000 n 
+0000000134 00000 n 
+0000000183 00000 n 
+0000000438 00000 n 
+0000004836 00000 n 
+0000004943 00000 n 
+0000005050 00000 n 
+0000005157 00000 n 
+0000005269 00000 n 
+0000005625 00000 n 
+0000015611 00000 n 
+0000015719 00000 n 
+0000015827 00000 n 
+0000015935 00000 n 
+0000016043 00000 n 
+0000016151 00000 n 
+0000016488 00000 n 
+0000030243 00000 n 
+0000030351 00000 n 
+0000030459 00000 n 
+0000030567 00000 n 
+0000030675 00000 n 
+0000030788 00000 n 
+0000031060 00000 n 
+0000044402 00000 n 
+0000044510 00000 n 
+0000044618 00000 n 
 trailer
 <<
-/Size 23
+/Size 29
 /Root 3 0 R
 /Info 1 0 R
 >>
 startxref
-28308
+44726
 %%EOF
